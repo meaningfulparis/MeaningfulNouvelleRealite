@@ -10,7 +10,7 @@ import SwiftUI
 struct GameHeader: View {
     
     let title:String
-    @State var timing:String = "00:14"
+    @ObservedObject var gameTimer:GameTimer
     
     
     var body: some View {
@@ -18,7 +18,7 @@ struct GameHeader: View {
             Text(title)
             Spacer()
             HStack {
-                Text(timing)
+                Text(gameTimer.durationDisplay)
                 Image(systemName: "hourglass")
             }
         })
@@ -29,7 +29,9 @@ struct GameHeader: View {
 }
 
 struct GameHeader_Previews: PreviewProvider {
+    
+    static let gameTimer = GameTimer()
     static var previews: some View {
-        GameHeader(title: "Game name")
+        GameHeader(title: "Game name", gameTimer: gameTimer)
     }
 }

@@ -11,11 +11,12 @@ struct GameView: View {
     
     @State var isPlaying:Bool = false
     @ObservedObject var standModeDetector = StandModeDetector()
+    @ObservedObject var gameTimer = GameTimer()
     
     var body: some View {
         HStack(alignment: .top, spacing: 24){
             VStack {
-                GameHeader(title: "Composition II", timing: "00:00")
+                GameHeader(title: "Composition II", gameTimer: gameTimer)
                 ZStack {
                     if isPlaying {
                         GeometryReader { geometry in

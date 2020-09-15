@@ -43,7 +43,7 @@ class StandModeDetector: ObservableObject {
             if pitch > -3, pitch < 3, totalAcceleration < 0.006 {
 //                print("-> 1. true")
                 DispatchQueue.main.async { self.isInStandMode = true }
-            } else if pitch > 85, pitch < 95, totalAcceleration < 0.004 {
+            } else if pitch > 85, pitch < 95, totalAcceleration < 0.04 {
 //                print("-> 2. true")
                 DispatchQueue.main.async { self.isInStandMode = true }
             }

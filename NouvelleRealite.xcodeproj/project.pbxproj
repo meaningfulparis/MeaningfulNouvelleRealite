@@ -20,6 +20,7 @@
 		DE7A64802510F8C500894278 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A647F2510F8C500894278 /* ColorExtension.swift */; };
 		DE7A64832510F99D00894278 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A64822510F99D00894278 /* PrimaryButtonStyle.swift */; };
 		DE7A64862510FE5D00894278 /* StandModeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A64852510FE5D00894278 /* StandModeDetector.swift */; };
+		DE7A648825110C8B00894278 /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A648725110C8B00894278 /* GameTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		DE7A647F2510F8C500894278 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		DE7A64822510F99D00894278 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		DE7A64852510FE5D00894278 /* StandModeDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandModeDetector.swift; sourceTree = "<group>"; };
+		DE7A648725110C8B00894278 /* GameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				DE7A64852510FE5D00894278 /* StandModeDetector.swift */,
+				DE7A648725110C8B00894278 /* GameTimer.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				DE7A64832510F99D00894278 /* PrimaryButtonStyle.swift in Sources */,
 				DE7A64862510FE5D00894278 /* StandModeDetector.swift in Sources */,
 				DE7A647B2510F18800894278 /* GameHeader.swift in Sources */,
+				DE7A648825110C8B00894278 /* GameTimer.swift in Sources */,
 				DE7A64642510EDEC00894278 /* GameARView.swift in Sources */,
 				DE7A64622510EDEC00894278 /* AppDelegate.swift in Sources */,
 				DE7A64802510F8C500894278 /* ColorExtension.swift in Sources */,
