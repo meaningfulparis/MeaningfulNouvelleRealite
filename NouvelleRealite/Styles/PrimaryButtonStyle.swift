@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct PrimaryButtonStyle: ButtonStyle {
+    
+    var color:Color = .nrOceanBlack
+    
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
-            .foregroundColor(Color.nrOceanBlack)
-            .font(.system(size: 30, weight: .bold, design: .default))
+            .multilineTextAlignment(.center)
+            .foregroundColor(color)
+            .font(.system(size: 24, weight: .bold, design: .default))
             .padding(EdgeInsets(top: 16, leading: 40, bottom: 16, trailing: 40))
-            .border(Color.nrOceanBlack, width: 4)
+            .border(color, width: 4)
     }
 }
 

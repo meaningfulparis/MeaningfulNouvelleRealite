@@ -21,6 +21,8 @@
 		DE7A64832510F99D00894278 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A64822510F99D00894278 /* PrimaryButtonStyle.swift */; };
 		DE7A64862510FE5D00894278 /* StandModeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A64852510FE5D00894278 /* StandModeDetector.swift */; };
 		DE7A648825110C8B00894278 /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A648725110C8B00894278 /* GameTimer.swift */; };
+		DE7A648A251116B000894278 /* HelpBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A6489251116B000894278 /* HelpBlock.swift */; };
+		DE7A648C25111AE900894278 /* GameAROverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A648B25111AE900894278 /* GameAROverlay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		DE7A64822510F99D00894278 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		DE7A64852510FE5D00894278 /* StandModeDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandModeDetector.swift; sourceTree = "<group>"; };
 		DE7A648725110C8B00894278 /* GameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
+		DE7A6489251116B000894278 /* HelpBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpBlock.swift; sourceTree = "<group>"; };
+		DE7A648B25111AE900894278 /* GameAROverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAROverlay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +102,10 @@
 		DE7A64742510F0F800894278 /* GameSubviews */ = {
 			isa = PBXGroup;
 			children = (
-				DE7A64632510EDEC00894278 /* GameARView.swift */,
 				DE7A64752510F11B00894278 /* GameIntroductionView.swift */,
 				DE7A64772510F13000894278 /* GameStandView.swift */,
+				DE7A64632510EDEC00894278 /* GameARView.swift */,
+				DE7A648B25111AE900894278 /* GameAROverlay.swift */,
 				DE7A64792510F17B00894278 /* Components */,
 			);
 			path = GameSubviews;
@@ -110,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				DE7A647A2510F18800894278 /* GameHeader.swift */,
+				DE7A6489251116B000894278 /* HelpBlock.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -211,10 +217,12 @@
 			files = (
 				DE7A64832510F99D00894278 /* PrimaryButtonStyle.swift in Sources */,
 				DE7A64862510FE5D00894278 /* StandModeDetector.swift in Sources */,
+				DE7A648C25111AE900894278 /* GameAROverlay.swift in Sources */,
 				DE7A647B2510F18800894278 /* GameHeader.swift in Sources */,
 				DE7A648825110C8B00894278 /* GameTimer.swift in Sources */,
 				DE7A64642510EDEC00894278 /* GameARView.swift in Sources */,
 				DE7A64622510EDEC00894278 /* AppDelegate.swift in Sources */,
+				DE7A648A251116B000894278 /* HelpBlock.swift in Sources */,
 				DE7A64802510F8C500894278 /* ColorExtension.swift in Sources */,
 				DE7A64732510EEAC00894278 /* GameView.swift in Sources */,
 				DE7A64782510F13000894278 /* GameStandView.swift in Sources */,

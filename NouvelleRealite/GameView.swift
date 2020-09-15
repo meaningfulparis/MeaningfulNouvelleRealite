@@ -14,26 +14,25 @@ struct GameView: View {
     @ObservedObject var gameTimer = GameTimer()
     
     var body: some View {
-        HStack(alignment: .top, spacing: 24){
-            VStack {
+        HStack(alignment: .top){
+            VStack(spacing: 0) {
                 GameHeader(title: "Composition II", gameTimer: gameTimer)
                 ZStack {
+                    Color.nrSkin.edgesIgnoringSafeArea(.bottom)
                     if isPlaying {
-                        GeometryReader { geometry in
-                            GameARView()
-                                .padding(EdgeInsets(top: -24, leading: 0, bottom: -geometry.safeAreaInsets.bottom, trailing: 0))
-                        }
                         if standModeDetector.isInStandMode {
-                            GameStandView()
+                            GameStandView(gameTimer: gameTimer)
+                        } else {
+                            GameARView().edgesIgnoringSafeArea(.bottom)
+                            GameAROverlay()
                         }
                     } else {
                         GameIntroductionView(startAction: {
-                            print("-> is playing")
+                            print("-> play")
                             isPlaying = true
                         })
                     }
                 }
-                Spacer()
             }
         }
     }

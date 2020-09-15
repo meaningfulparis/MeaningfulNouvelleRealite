@@ -24,7 +24,7 @@ struct GameIntroductionView: View {
                 .frame(minWidth: 300, idealWidth: UIScreen.main.bounds.width, maxWidth: UIScreen.main.bounds.width, minHeight: 0, idealHeight: 300, maxHeight: 500, alignment: .center)
             Spacer()
             Button("3, 2, 1, C'est parti !", action: startAction).buttonStyle(PrimaryButtonStyle())
-        }
+        }.padding(EdgeInsets(top: 24, leading: 32, bottom: 24, trailing: 32))
     }
 }
 

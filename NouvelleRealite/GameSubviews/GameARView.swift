@@ -10,7 +10,7 @@ import RealityKit
 
 struct GameARView : View {
     var body: some View {
-        return ARViewContainer().edgesIgnoringSafeArea(.all)
+        ARViewContainer().edgesIgnoringSafeArea(.all)
     }
 }
 

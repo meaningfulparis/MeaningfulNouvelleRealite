@@ -12,7 +12,6 @@ struct GameHeader: View {
     let title:String
     @ObservedObject var gameTimer:GameTimer
     
-    
     var body: some View {
         HStack(alignment: .top, content: {
             Text(title)
@@ -34,4 +33,5 @@ struct GameHeader_Previews: PreviewProvider {
     static var previews: some View {
         GameHeader(title: "Game name", gameTimer: gameTimer)
     }
+    
 }
