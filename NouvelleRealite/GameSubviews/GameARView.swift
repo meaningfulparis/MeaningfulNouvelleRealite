@@ -7,6 +7,7 @@
 
 import SwiftUI
 import RealityKit
+import ARKit
 
 struct GameARView : View {
     var body: some View {
@@ -16,21 +17,51 @@ struct GameARView : View {
 
 struct ARViewContainer: UIViewRepresentable {
     
+    private let arView = NRARView(frame: .zero)
+    
     func makeUIView(context: Context) -> ARView {
         
-        let arView = ARView(frame: .zero)
-        
         // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
+        let compositionAnchor = try! Composition.loadBox()
+        let maisonAnchor = try! MaisonParticuliere.loadBox()
         
         // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
+        arView.scene.anchors.append(compositionAnchor)
+        arView.scene.anchors.append(maisonAnchor)
         
         return arView
         
     }
     
     func updateUIView(_ uiView: ARView, context: Context) {}
+    
+}
+
+class NRARView : ARView, ARSessionDelegate {
+    
+    required init(frame frameRect: CGRect) {
+        super.init(frame: .zero)
+        self.session.delegate = self
+    }
+    
+    @objc required dynamic init?(coder decoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
+        print("\n-> add anchors")
+        print(anchors)
+    }
+    
+    func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
+        print("\n-> update anchors")
+        print(anchors)
+    }
+    
+    func session(_ session: ARSession, didRemove anchors: [ARAnchor]) {
+        print("\n-> remove anchors")
+        print(anchors)
+    }
     
 }
 

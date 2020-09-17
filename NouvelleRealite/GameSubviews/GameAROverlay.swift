@@ -9,8 +9,6 @@ import SwiftUI
 
 struct GameAROverlay: View {
     
-    
-    
     var body: some View {
         VStack {
             HelpBlock(type: .ARMode)

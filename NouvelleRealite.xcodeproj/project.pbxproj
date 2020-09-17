@@ -11,9 +11,10 @@
 		DE305C9E2513699400567372 /* Sora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE305C9C2513699400567372 /* Sora-Bold.ttf */; };
 		DE305CA925136B1800567372 /* TextModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE305CA825136B1800567372 /* TextModifiers.swift */; };
 		DE305CAE2513708400567372 /* ScanBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE305CAD2513708400567372 /* ScanBlock.swift */; };
+		DE5B24E625139CEF0026E802 /* MaisonParticuliere.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = DE5B24E425139CB20026E802 /* MaisonParticuliere.rcproject */; };
+		DE5B24EE2513A5F30026E802 /* Composition.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = DE5B24EC2513A5EF0026E802 /* Composition.rcproject */; };
 		DE7A64622510EDEC00894278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A64612510EDEC00894278 /* AppDelegate.swift */; };
 		DE7A64642510EDEC00894278 /* GameARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A64632510EDEC00894278 /* GameARView.swift */; };
-		DE7A64662510EDEC00894278 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = DE7A64652510EDEC00894278 /* Experience.rcproject */; };
 		DE7A64682510EDEE00894278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE7A64672510EDEE00894278 /* Assets.xcassets */; };
 		DE7A646B2510EDEE00894278 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE7A646A2510EDEE00894278 /* Preview Assets.xcassets */; };
 		DE7A64732510EEAC00894278 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A64722510EEAC00894278 /* GameView.swift */; };
@@ -34,10 +35,11 @@
 		DE305C9C2513699400567372 /* Sora-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sora-Bold.ttf"; sourceTree = "<group>"; };
 		DE305CA825136B1800567372 /* TextModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifiers.swift; sourceTree = "<group>"; };
 		DE305CAD2513708400567372 /* ScanBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanBlock.swift; sourceTree = "<group>"; };
+		DE5B24E425139CB20026E802 /* MaisonParticuliere.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = MaisonParticuliere.rcproject; sourceTree = "<group>"; };
+		DE5B24EC2513A5EF0026E802 /* Composition.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Composition.rcproject; sourceTree = "<group>"; };
 		DE7A645E2510EDEC00894278 /* NouvelleRealite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NouvelleRealite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7A64612510EDEC00894278 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE7A64632510EDEC00894278 /* GameARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameARView.swift; sourceTree = "<group>"; };
-		DE7A64652510EDEC00894278 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		DE7A64672510EDEE00894278 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE7A646A2510EDEE00894278 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DE7A646C2510EDEE00894278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +104,8 @@
 				DE7A64812510F98100894278 /* Styles */,
 				DE7A647E2510F8B700894278 /* Extensions */,
 				DE7A64672510EDEE00894278 /* Assets.xcassets */,
-				DE7A64652510EDEC00894278 /* Experience.rcproject */,
+				DE5B24EC2513A5EF0026E802 /* Composition.rcproject */,
+				DE5B24E425139CB20026E802 /* MaisonParticuliere.rcproject */,
 				DE305C9A2513693C00567372 /* Fonts */,
 				DE7A64692510EDEE00894278 /* Preview Content */,
 			);
@@ -240,18 +243,19 @@
 				DE7A64832510F99D00894278 /* PrimaryButtonStyle.swift in Sources */,
 				DE305CAE2513708400567372 /* ScanBlock.swift in Sources */,
 				DE305CA925136B1800567372 /* TextModifiers.swift in Sources */,
+				DE5B24EE2513A5F30026E802 /* Composition.rcproject in Sources */,
 				DE7A64862510FE5D00894278 /* StandModeDetector.swift in Sources */,
 				DE7A648C25111AE900894278 /* GameAROverlay.swift in Sources */,
 				DE7A647B2510F18800894278 /* GameHeader.swift in Sources */,
 				DE7A648825110C8B00894278 /* GameTimer.swift in Sources */,
 				DE7A64642510EDEC00894278 /* GameARView.swift in Sources */,
+				DE5B24E625139CEF0026E802 /* MaisonParticuliere.rcproject in Sources */,
 				DE7A64622510EDEC00894278 /* AppDelegate.swift in Sources */,
 				DE7A648A251116B000894278 /* HelpBlock.swift in Sources */,
 				DE7A64802510F8C500894278 /* ColorExtension.swift in Sources */,
 				DE7A64732510EEAC00894278 /* GameView.swift in Sources */,
 				DE7A64782510F13000894278 /* GameStandView.swift in Sources */,
 				DE7A64762510F11B00894278 /* GameIntroductionView.swift in Sources */,
-				DE7A64662510EDEC00894278 /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
