@@ -11,7 +11,7 @@ struct HelpBlock: View {
     
     enum InfoType : String {
         case StandMode = "Attrapez votre téléphone pour scanner votre réalisation et accéder à la récompense en AR !"
-        case ARMode = "Posez votre téléphone sur un support ou sur la atble pour passer en mode socle"
+        case ARMode = "Posez votre téléphone sur un support ou sur la table pour passer en mode socle"
     }
     
     let type:InfoType
@@ -23,8 +23,7 @@ struct HelpBlock: View {
                     .frame(width: 48, height: 48)
                     .foregroundColor(Color.nrSun)
             }
-            Text(type.rawValue)
-                .font(.body)
+            Text(type.rawValue).modifier(BodyS())
         }
         .padding(16)
         .background(Color.nrRiver)

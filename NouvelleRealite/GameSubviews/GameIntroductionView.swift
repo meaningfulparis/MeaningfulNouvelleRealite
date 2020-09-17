@@ -13,10 +13,12 @@ struct GameIntroductionView: View {
     
     var body: some View {
         VStack(alignment: .center, spacing: 24) {
-            Text("Mémorisez le tableau")
-                .foregroundColor(.nrRedPrimary)
-            Text("Puis construisez grâce à votre mémoire")
-                .foregroundColor(.nrBluePrimary)
+            VStack(alignment: .leading, spacing: 24) {
+                Text("Mémorisez le tableau")
+                    .modifier(Title(color: .nrRedPrimary))
+                Text("Puis construisez grâce à votre mémoire")
+                    .modifier(Title(color: .nrBluePrimary))
+            }
             Spacer()
             Image("Preview")
                 .resizable()

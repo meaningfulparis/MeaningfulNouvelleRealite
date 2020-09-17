@@ -13,9 +13,8 @@ struct PrimaryButtonStyle: ButtonStyle {
     
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
+            .modifier(SubTitle(color: color))
             .multilineTextAlignment(.center)
-            .foregroundColor(color)
-            .font(.system(size: 24, weight: .bold, design: .default))
             .padding(EdgeInsets(top: 16, leading: 40, bottom: 16, trailing: 40))
             .border(color, width: 4)
     }
@@ -23,8 +22,13 @@ struct PrimaryButtonStyle: ButtonStyle {
 
 struct PrimaryButton_Previews: PreviewProvider {
     static var previews: some View {
-        Button("Primary button") {
-            print("hey")
-        }.buttonStyle(PrimaryButtonStyle())
+        VStack(spacing: 24) {
+            Button("Primary button") {
+                print("hey")
+            }.buttonStyle(PrimaryButtonStyle())
+            Button("Primary button") {
+                print("hey")
+            }.buttonStyle(PrimaryButtonStyle(color: .nrBluePrimary))
+        }
     }
 }

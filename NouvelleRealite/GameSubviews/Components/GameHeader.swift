@@ -14,10 +14,10 @@ struct GameHeader: View {
     
     var body: some View {
         HStack(alignment: .top, content: {
-            Text(title)
+            Text(title).modifier(SubTitle(color: .nrSkin))
             Spacer()
             HStack {
-                Text(gameTimer.durationDisplay)
+                Text(gameTimer.durationDisplay).modifier(BodyM(color: .nrSkin))
                 Image(systemName: "hourglass")
             }
         })

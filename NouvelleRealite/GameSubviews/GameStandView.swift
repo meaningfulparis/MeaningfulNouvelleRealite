@@ -16,7 +16,7 @@ struct GameStandView: View {
             HelpBlock(type: .StandMode)
             Spacer()
             Text(gameTimer.durationDisplay)
-                .font(.title)
+                .modifier(BigText())
             Spacer()
             Button("J'ai perdu la mémoire !") {
                 print("give help")

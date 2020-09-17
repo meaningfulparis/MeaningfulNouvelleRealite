@@ -2,6 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Sora-Regular.ttf</string>
+		<string>Sora-Bold.ttf</string>
+	</array>
 	<key>NSMotionUsageDescription</key>
 	<string>Afin de vous proposer une meilleure expérience</string>
 	<key>CFBundleDevelopmentRegion</key>
