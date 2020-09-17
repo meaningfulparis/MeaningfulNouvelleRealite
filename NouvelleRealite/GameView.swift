@@ -20,10 +20,11 @@ struct GameView: View {
                 ZStack {
                     Color.nrSkin.edgesIgnoringSafeArea(.bottom)
                     if isPlaying {
+                        GameARView().edgesIgnoringSafeArea(.bottom)
                         if standModeDetector.isInStandMode {
+                            Color.nrSkin.edgesIgnoringSafeArea(.bottom)
                             GameStandView(gameTimer: gameTimer)
                         } else {
-                            GameARView().edgesIgnoringSafeArea(.bottom)
                             GameAROverlay()
                         }
                     } else {

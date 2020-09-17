@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct GameAROverlay: View {
+    
+    
+    
     var body: some View {
         VStack {
             HelpBlock(type: .ARMode)
             Spacer()
-        }.padding(EdgeInsets(top: 24, leading: 32, bottom: 24, trailing: 32))
+            ScanBlock(objectHasBeenDetected: false)
+        }
+        .padding(EdgeInsets(top: 24, leading: 32, bottom: 24, trailing: 32))
     }
 }
 
