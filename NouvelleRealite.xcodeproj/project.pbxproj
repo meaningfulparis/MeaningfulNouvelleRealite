@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE0737022514F917000B7D95 /* ModelViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0737012514F917000B7D95 /* ModelViewer.swift */; };
 		DE305C9D2513699400567372 /* Sora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE305C9B2513699400567372 /* Sora-Regular.ttf */; };
 		DE305C9E2513699400567372 /* Sora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE305C9C2513699400567372 /* Sora-Bold.ttf */; };
 		DE305CA925136B1800567372 /* TextModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE305CA825136B1800567372 /* TextModifiers.swift */; };
@@ -28,9 +29,11 @@
 		DE7A648825110C8B00894278 /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A648725110C8B00894278 /* GameTimer.swift */; };
 		DE7A648A251116B000894278 /* HelpBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A6489251116B000894278 /* HelpBlock.swift */; };
 		DE7A648C25111AE900894278 /* GameAROverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A648B25111AE900894278 /* GameAROverlay.swift */; };
+		DEC4D76D2514FFC60020AB84 /* composition.usdz in Resources */ = {isa = PBXBuildFile; fileRef = DEC4D76C2514FFC60020AB84 /* composition.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE0737012514F917000B7D95 /* ModelViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewer.swift; sourceTree = "<group>"; };
 		DE305C9B2513699400567372 /* Sora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sora-Regular.ttf"; sourceTree = "<group>"; };
 		DE305C9C2513699400567372 /* Sora-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sora-Bold.ttf"; sourceTree = "<group>"; };
 		DE305CA825136B1800567372 /* TextModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifiers.swift; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 		DE7A648725110C8B00894278 /* GameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
 		DE7A6489251116B000894278 /* HelpBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpBlock.swift; sourceTree = "<group>"; };
 		DE7A648B25111AE900894278 /* GameAROverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAROverlay.swift; sourceTree = "<group>"; };
+		DEC4D76C2514FFC60020AB84 /* composition.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = composition.usdz; path = "../../../Downloads/Meaningful/NouvelleRéalité/IntroductionModel/composition.usdz"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 				DE7A64812510F98100894278 /* Styles */,
 				DE7A647E2510F8B700894278 /* Extensions */,
 				DE7A64672510EDEE00894278 /* Assets.xcassets */,
+				DEC4D76C2514FFC60020AB84 /* composition.usdz */,
 				DE5B24EC2513A5EF0026E802 /* Composition.rcproject */,
 				DE5B24E425139CB20026E802 /* MaisonParticuliere.rcproject */,
 				DE305C9A2513693C00567372 /* Fonts */,
@@ -138,6 +143,7 @@
 				DE7A647A2510F18800894278 /* GameHeader.swift */,
 				DE7A6489251116B000894278 /* HelpBlock.swift */,
 				DE305CAD2513708400567372 /* ScanBlock.swift */,
+				DE0737012514F917000B7D95 /* ModelViewer.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -229,6 +235,7 @@
 				DE7A647D2510F6DA00894278 /* Launch Screen.storyboard in Resources */,
 				DE7A646B2510EDEE00894278 /* Preview Assets.xcassets in Resources */,
 				DE305C9E2513699400567372 /* Sora-Bold.ttf in Resources */,
+				DEC4D76D2514FFC60020AB84 /* composition.usdz in Resources */,
 				DE7A64682510EDEE00894278 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +263,7 @@
 				DE7A64732510EEAC00894278 /* GameView.swift in Sources */,
 				DE7A64782510F13000894278 /* GameStandView.swift in Sources */,
 				DE7A64762510F11B00894278 /* GameIntroductionView.swift in Sources */,
+				DE0737022514F917000B7D95 /* ModelViewer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

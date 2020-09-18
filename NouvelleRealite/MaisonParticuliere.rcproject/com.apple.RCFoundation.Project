@@ -23,89 +23,115 @@
               "overrides" : {
                 "children" : {
                   "4A213441-135C-450E-8EF8-1A4EAB267C1D" : null,
-                  "6C292EE8-3245-4A35-BF29-E935E3CBB882" : {
+                  "6C292EE8-3245-4A35-BF29-E935E3CBB882" : null,
+                  "7F5F1ADC-E5E4-4EF5-A5B5-FC43B071FFA5" : null,
+                  "632E476F-1E55-4E30-9723-1C51DD2E8B89" : null,
+                  "A750E688-842F-4C56-8ED2-BD7707874A3B" : {
                     "overrides" : {
-                      "arguments" : [
-                        [
-                          "diameter",
-                          {
-                            "typeName" : "Double",
-                            "value" : 0.029999999999999999
+                      "children" : {
+                        "USDScene" : {
+                          "overrides" : {
+                            "arguments" : [
+                              [
+                                "includeSceneScaling",
+                                {
+                                  "typeName" : "Bool",
+                                  "value" : false
+                                }
+                              ],
+                              [
+                                "subpath",
+                                {
+                                  "typeName" : "String",
+                                  "value" : ""
+                                }
+                              ],
+                              [
+                                "url",
+                                {
+                                  "typeName" : "String",
+                                  "value" : "model:a2c5f1610fbb03a08448b87795e8a774\/scenebc3i9liqu3r01eum.usdz"
+                                }
+                              ],
+                              [
+                                "withDescendants",
+                                {
+                                  "typeName" : "Bool",
+                                  "value" : true
+                                }
+                              ]
+                            ],
+                            "factory" : {
+                              "identifier" : "com.apple.af.FileImportAssetFactory",
+                              "version" : "0.0"
+                            },
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "B0CD2B8B-BCB1-4C6E-919E-1E529051B8DA"
+                                }
+                              ]
+                            ]
+                          },
+                          "transform" : {
+                            "matrix" : [
+                              0.0099999997764825821,
+                              0,
+                              0,
+                              0,
+                              0,
+                              0.0099999997764825821,
+                              0,
+                              0,
+                              0,
+                              0,
+                              0.0099999997764825821,
+                              0,
+                              0,
+                              0,
+                              0,
+                              1
+                            ]
                           }
-                        ],
-                        [
-                          "height",
-                          {
-                            "typeName" : "Double",
-                            "value" : 0.10000000000000001
-                          }
-                        ],
-                        [
-                          "material",
-                          {
-                            "typeName" : "String",
-                            "value" : "rubber"
-                          }
-                        ],
-                        [
-                          "revolutions",
-                          {
-                            "typeName" : "Double",
-                            "value" : 5
-                          }
-                        ],
-                        [
-                          "thickness",
-                          {
-                            "typeName" : "Double",
-                            "value" : 0.0040000000000000001
-                          }
-                        ],
-                        [
-                          "type",
-                          {
-                            "typeName" : "String",
-                            "value" : "helix"
-                          }
-                        ]
-                      ],
+                        }
+                      },
                       "factory" : {
-                        "identifier" : "com.apple.rc.af.CoreAssetFactories.PrimitiveShapeAssetFactory",
-                        "version" : "1.0"
+                        "identifier" : "com.apple.af.Group",
+                        "version" : "0.0"
                       },
                       "runtimeAttributes" : [
                         [
                           "RuntimeIdentifier",
                           {
                             "typeName" : "UUID",
-                            "value" : "47402D41-D91A-4632-9888-0C7762E0D1C9"
+                            "value" : "9A27AF36-DE15-4503-8BB3-2706969DCDD1"
                           }
                         ]
                       ]
                     },
                     "transform" : {
                       "matrix" : [
-                        1,
+                        0.14000001549720764,
                         0,
                         0,
                         0,
                         0,
-                        1,
+                        0.14000001549720764,
                         0,
                         0,
                         0,
                         0,
-                        1,
+                        0.14000001549720764,
                         0,
                         0,
-                        0.049988873302936554,
-                        0,
+                        0.013892178423702717,
+                        0.036479301750659943,
                         1
                       ]
                     }
                   },
-                  "7F5F1ADC-E5E4-4EF5-A5B5-FC43B071FFA5" : null,
-                  "632E476F-1E55-4E30-9723-1C51DD2E8B89" : null,
                   "B91C7CA3-4AB1-4253-9A84-07383168A8A8" : null
                 },
                 "factory" : null,
@@ -128,12 +154,12 @@
                   0,
                   0,
                   0,
-                  0.80754852294921875,
+                  0.80754858255386353,
                   -0.58980095386505127,
                   0,
                   0,
                   0.58980095386505127,
-                  0.80754852294921875,
+                  0.80754858255386353,
                   0,
                   0,
                   1.135667085647583,
