@@ -10,16 +10,22 @@ import RealityKit
 import ARKit
 
 struct GameARView : View {
+    
+    @ObservedObject var game:Game
+    
     var body: some View {
-        ARViewContainer().edgesIgnoringSafeArea(.all)
+        ARViewContainer(game: game).edgesIgnoringSafeArea(.all)
     }
 }
 
 struct ARViewContainer: UIViewRepresentable {
     
-    private let arView = NRARView(frame: .zero)
+    @ObservedObject var game:Game
     
     func makeUIView(context: Context) -> ARView {
+        
+        let arView = NRARView(frame: .zero)
+        arView.detectionCallback = { self.game.hasWin = true }
         
         // Load the "Box" scene from the "Experience" Reality File
         let compositionAnchor = try! Composition.loadBox()
@@ -39,6 +45,8 @@ struct ARViewContainer: UIViewRepresentable {
 
 class NRARView : ARView, ARSessionDelegate {
     
+    var detectionCallback:() -> Void = {}
+    
     required init(frame frameRect: CGRect) {
         super.init(frame: .zero)
         self.session.delegate = self
@@ -49,18 +57,11 @@ class NRARView : ARView, ARSessionDelegate {
     }
     
     func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
-        print("\n-> add anchors")
-        print(anchors)
-    }
-    
-    func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
-        print("\n-> update anchors")
-        print(anchors)
-    }
-    
-    func session(_ session: ARSession, didRemove anchors: [ARAnchor]) {
-        print("\n-> remove anchors")
-        print(anchors)
+        anchors.forEach { (anchor) in
+            if anchor is ARImageAnchor {
+                self.detectionCallback()
+            }
+        }
     }
     
 }
@@ -68,7 +69,7 @@ class NRARView : ARView, ARSessionDelegate {
 #if DEBUG
 struct GameARView_Previews : PreviewProvider {
     static var previews: some View {
-        GameARView()
+        GameARView(game: Game())
     }
 }
 #endif

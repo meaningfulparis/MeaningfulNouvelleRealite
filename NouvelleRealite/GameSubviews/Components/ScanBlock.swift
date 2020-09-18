@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ScanBlock: View {
     
-    @State var objectHasBeenDetected:Bool = false
+    @ObservedObject var game:Game
     
     var body: some View {
         GeometryReader(content: { geometry in
@@ -17,10 +17,10 @@ struct ScanBlock: View {
             VStack {
                 Spacer()
                 ZStack {
-                    NRRectangle(size: size, color: .nrRedPrimary, index: 2)
-                    NRRectangle(size: size, color: .nrSun, index: 1)
-                    NRRectangle(size: size, color: .nrBluePrimary, index: 0)
-                    if objectHasBeenDetected {
+                    NRRectangle(size: size, color: .nrRedPrimary, index: 2, game: game)
+                    NRRectangle(size: size, color: .nrSun, index: 1, game: game)
+                    NRRectangle(size: size, color: .nrBluePrimary, index: 0, game: game)
+                    if game.hasWin {
                         Text("Bravo !")
                             .modifier(SubTitle(color: .nrSkin))
                     } else {
@@ -41,19 +41,18 @@ struct NRRectangle : View {
     let size:CGSize
     let color:Color
     let index:CGFloat
+    @ObservedObject var game:Game
     @State private var isAnimated:Bool = false
-    
-    private let anim = Animation.linear(duration: 10).repeatForever(autoreverses: false)
     
     var body: some View {
         Rectangle()
-            .frame(width: size.width, height: size.height)
+            .frame(width: game.hasWin ? 16 : size.width, height: size.height)
             .foregroundColor(color)
             .position(
-                x: isAnimated ? (index + 0.5) * size.width : (index - 2.5) * size.width,
+                x: game.hasWin ? 8 + index * 16 : (isAnimated ? (index + 0.5) * size.width : (index - 2.5) * size.width),
                 y: size.height / 2
             )
-            .animation(anim)
+            .animation(game.hasWin ? .easeOut(duration: 2) : Animation.linear(duration: 10).repeatForever(autoreverses: false))
             .onAppear { isAnimated.toggle() }
     }
     
@@ -61,6 +60,6 @@ struct NRRectangle : View {
 
 struct ScanBlock_Previews: PreviewProvider {
     static var previews: some View {
-        ScanBlock()
+        ScanBlock(game: Game())
     }
 }

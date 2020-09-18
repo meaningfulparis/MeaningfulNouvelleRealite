@@ -12,6 +12,7 @@ struct GameView: View {
     @State var isPlaying:Bool = false
     @ObservedObject var standModeDetector = StandModeDetector()
     @ObservedObject var gameTimer = GameTimer()
+    @ObservedObject var game = Game()
     
     var body: some View {
         HStack(alignment: .top){
@@ -20,12 +21,12 @@ struct GameView: View {
                 ZStack {
                     Color.nrSkin.edgesIgnoringSafeArea(.bottom)
                     if isPlaying {
-                        GameARView().edgesIgnoringSafeArea(.bottom)
+                        GameARView(game: game)
                         if standModeDetector.isInStandMode {
                             Color.nrSkin.edgesIgnoringSafeArea(.bottom)
                             GameStandView(gameTimer: gameTimer)
                         } else {
-                            GameAROverlay()
+                            GameAROverlay(game: game)
                         }
                     } else {
                         GameIntroductionView(startAction: {

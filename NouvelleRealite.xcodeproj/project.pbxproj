@@ -29,6 +29,7 @@
 		DE7A648825110C8B00894278 /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A648725110C8B00894278 /* GameTimer.swift */; };
 		DE7A648A251116B000894278 /* HelpBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A6489251116B000894278 /* HelpBlock.swift */; };
 		DE7A648C25111AE900894278 /* GameAROverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A648B25111AE900894278 /* GameAROverlay.swift */; };
+		DE90E5BA25150A3400921E30 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90E5B925150A3400921E30 /* Game.swift */; };
 		DEC4D76D2514FFC60020AB84 /* composition.usdz in Resources */ = {isa = PBXBuildFile; fileRef = DEC4D76C2514FFC60020AB84 /* composition.usdz */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		DE7A648725110C8B00894278 /* GameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
 		DE7A6489251116B000894278 /* HelpBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpBlock.swift; sourceTree = "<group>"; };
 		DE7A648B25111AE900894278 /* GameAROverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAROverlay.swift; sourceTree = "<group>"; };
+		DE90E5B925150A3400921E30 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		DEC4D76C2514FFC60020AB84 /* composition.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = composition.usdz; path = "../../../Downloads/Meaningful/NouvelleRéalité/IntroductionModel/composition.usdz"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +172,7 @@
 			children = (
 				DE7A64852510FE5D00894278 /* StandModeDetector.swift */,
 				DE7A648725110C8B00894278 /* GameTimer.swift */,
+				DE90E5B925150A3400921E30 /* Game.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE7A64832510F99D00894278 /* PrimaryButtonStyle.swift in Sources */,
+				DE90E5BA25150A3400921E30 /* Game.swift in Sources */,
 				DE305CAE2513708400567372 /* ScanBlock.swift in Sources */,
 				DE305CA925136B1800567372 /* TextModifiers.swift in Sources */,
 				DE5B24EE2513A5F30026E802 /* Composition.rcproject in Sources */,

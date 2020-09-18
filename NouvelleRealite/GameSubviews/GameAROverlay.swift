@@ -9,11 +9,15 @@ import SwiftUI
 
 struct GameAROverlay: View {
     
+    @ObservedObject var game:Game
+    
     var body: some View {
         VStack {
-            HelpBlock(type: .ARMode)
+            if !game.hasWin {
+                HelpBlock(type: .ARMode)
+            }
             Spacer()
-            ScanBlock(objectHasBeenDetected: false)
+            ScanBlock(game: game)
         }
         .padding(EdgeInsets(top: 24, leading: 32, bottom: 24, trailing: 32))
     }
@@ -21,6 +25,6 @@ struct GameAROverlay: View {
 
 struct GameAROverlay_Previews: PreviewProvider {
     static var previews: some View {
-        GameAROverlay()
+        GameAROverlay(game: Game())
     }
 }
