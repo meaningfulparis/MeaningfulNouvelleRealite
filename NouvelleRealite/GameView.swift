@@ -11,26 +11,28 @@ struct GameView: View {
     
     @State var isPlaying:Bool = false
     @ObservedObject var standModeDetector = StandModeDetector()
-    @ObservedObject var gameTimer = GameTimer()
     @ObservedObject var game = Game()
     
     var body: some View {
         HStack(alignment: .top){
             VStack(spacing: 0) {
-                GameHeader(title: "Composition II", gameTimer: gameTimer)
+                GameHeader(title: "Composition II", game: game)
                 ZStack {
                     Color.nrSkin.edgesIgnoringSafeArea(.bottom)
                     if isPlaying {
                         GameARView(game: game)
                         if standModeDetector.isInStandMode {
                             Color.nrSkin.edgesIgnoringSafeArea(.bottom)
-                            GameStandView(gameTimer: gameTimer)
+                            GameStandView(game: game)
                         } else {
                             GameAROverlay(game: game)
+                                .onTapGesture {
+                                    isPlaying = false
+                                    game.hasWin = false
+                                }
                         }
                     } else {
                         GameIntroductionView(startAction: {
-                            print("-> play")
                             isPlaying = true
                         })
                     }

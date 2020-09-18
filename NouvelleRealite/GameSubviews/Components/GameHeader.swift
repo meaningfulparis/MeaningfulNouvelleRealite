@@ -10,14 +10,14 @@ import SwiftUI
 struct GameHeader: View {
     
     let title:String
-    @ObservedObject var gameTimer:GameTimer
+    @ObservedObject var game:Game
     
     var body: some View {
         HStack(alignment: .top, content: {
             Text(title).modifier(SubTitle(color: .nrSkin))
             Spacer()
             HStack {
-                Text(gameTimer.durationDisplay).modifier(BodyM(color: .nrSkin))
+                Text(game.durationDisplay).modifier(BodyM(color: .nrSkin))
                 Image(systemName: "hourglass")
             }
         })
@@ -29,9 +29,8 @@ struct GameHeader: View {
 
 struct GameHeader_Previews: PreviewProvider {
     
-    static let gameTimer = GameTimer()
     static var previews: some View {
-        GameHeader(title: "Game name", gameTimer: gameTimer)
+        GameHeader(title: "Game name", game: Game())
     }
     
 }

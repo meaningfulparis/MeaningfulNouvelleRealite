@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GameStandView: View {
     
-    @ObservedObject var gameTimer:GameTimer
+    @ObservedObject var game:Game
     @State private var isAnimated:Bool = false
     
     private let shapeAnim = Animation.easeInOut(duration: 5).repeatForever()
@@ -43,7 +43,7 @@ struct GameStandView: View {
                 VStack {
                     HelpBlock(type: .StandMode)
                     Spacer()
-                    Text(gameTimer.durationDisplay)
+                    Text(game.durationDisplay)
                         .modifier(BigText())
                     Spacer()
                     Button("J'ai perdu la mémoire !") {
@@ -58,9 +58,8 @@ struct GameStandView: View {
 
 struct GameStandView_Previews: PreviewProvider {
     
-    static let gameTimer = GameTimer()
     static var previews: some View {
-        GameStandView(gameTimer: gameTimer)
+        GameStandView(game: Game())
     }
     
 }
