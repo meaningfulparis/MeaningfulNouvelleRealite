@@ -16,21 +16,13 @@ struct ModelViewer: UIViewRepresentable {
     func makeUIView(context: Context) -> SCNView {
         
         // Load composition scene
-        let scene = SCNScene(named: "composition.usdz")!
-        
-        // Camera
-        let cameraNode = SCNNode()
-        cameraNode.camera = SCNCamera()
-        cameraNode.look(at: scene.rootNode.position)
-        cameraNode.position = SCNVector3(x: 0, y: 0, z: 11)
-        scene.rootNode.addChildNode(cameraNode)
-        
+        let mainScene = SCNScene()
         // Light 1
         let lightNode = SCNNode()
         lightNode.light = SCNLight()
         lightNode.light?.type = .omni
-        lightNode.position = SCNVector3(x: 2, y: 2, z: 20)
-        scene.rootNode.addChildNode(lightNode)
+        lightNode.position = SCNVector3(x: 0, y: 0, z: 20)
+        mainScene.rootNode.addChildNode(lightNode)
         
         // Ambient light
         let ambientLightNode = SCNNode()
@@ -38,16 +30,25 @@ struct ModelViewer: UIViewRepresentable {
         ambientLightNode.light?.type = .ambient
         ambientLightNode.light?.intensity = 600
         ambientLightNode.light?.color = UIColor.lightGray
-        scene.rootNode.addChildNode(ambientLightNode)
+        mainScene.rootNode.addChildNode(ambientLightNode)
+        
+        
+        let scene = SCNScene(named: "composition.usdz")!
+        
+        // Camera
+        let cameraNode = SCNNode()
+        cameraNode.camera = SCNCamera()
+        cameraNode.position = SCNVector3(x: 0, y: 0, z: 11)
+        scene.rootNode.addChildNode(cameraNode)
         
         // Interactions
         sceneView.allowsCameraControl = true
-        sceneView.defaultCameraController.interactionMode = .orbitTurntable
         sceneView.cameraControlConfiguration.allowsTranslation = false
         
         sceneView.backgroundColor = UIColor(named: "Skin")
 //        sceneView.showsStatistics = true
-        sceneView.scene = scene
+        mainScene.rootNode.addChildNode(scene.rootNode)
+        sceneView.scene = mainScene
         
         return sceneView
     }

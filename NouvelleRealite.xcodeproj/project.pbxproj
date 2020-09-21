@@ -13,7 +13,6 @@
 		DE305CA925136B1800567372 /* TextModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE305CA825136B1800567372 /* TextModifiers.swift */; };
 		DE305CAE2513708400567372 /* ScanBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE305CAD2513708400567372 /* ScanBlock.swift */; };
 		DE5B24E625139CEF0026E802 /* MaisonParticuliere.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = DE5B24E425139CB20026E802 /* MaisonParticuliere.rcproject */; };
-		DE5B24EE2513A5F30026E802 /* Composition.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = DE5B24EC2513A5EF0026E802 /* Composition.rcproject */; };
 		DE7A64622510EDEC00894278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A64612510EDEC00894278 /* AppDelegate.swift */; };
 		DE7A64642510EDEC00894278 /* GameARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A64632510EDEC00894278 /* GameARView.swift */; };
 		DE7A64682510EDEE00894278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE7A64672510EDEE00894278 /* Assets.xcassets */; };
@@ -29,6 +28,8 @@
 		DE7A648A251116B000894278 /* HelpBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A6489251116B000894278 /* HelpBlock.swift */; };
 		DE7A648C25111AE900894278 /* GameAROverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A648B25111AE900894278 /* GameAROverlay.swift */; };
 		DE90E5BA25150A3400921E30 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90E5B925150A3400921E30 /* Game.swift */; };
+		DE9139172518B4B100F9D52B /* Composition.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = DE5B24EC2513A5EF0026E802 /* Composition.rcproject */; };
+		DE93776A2518A9D40043D842 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9377692518A9D40043D842 /* AudioPlayer.swift */; };
 		DEC4D76D2514FFC60020AB84 /* composition.usdz in Resources */ = {isa = PBXBuildFile; fileRef = DEC4D76C2514FFC60020AB84 /* composition.usdz */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		DE7A6489251116B000894278 /* HelpBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpBlock.swift; sourceTree = "<group>"; };
 		DE7A648B25111AE900894278 /* GameAROverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAROverlay.swift; sourceTree = "<group>"; };
 		DE90E5B925150A3400921E30 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		DE9377692518A9D40043D842 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		DEC4D76C2514FFC60020AB84 /* composition.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = composition.usdz; path = "../../../Downloads/Meaningful/NouvelleRéalité/IntroductionModel/composition.usdz"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +146,7 @@
 				DE7A6489251116B000894278 /* HelpBlock.swift */,
 				DE305CAD2513708400567372 /* ScanBlock.swift */,
 				DE0737012514F917000B7D95 /* ModelViewer.swift */,
+				DE9377692518A9D40043D842 /* AudioPlayer.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -251,13 +254,14 @@
 				DE90E5BA25150A3400921E30 /* Game.swift in Sources */,
 				DE305CAE2513708400567372 /* ScanBlock.swift in Sources */,
 				DE305CA925136B1800567372 /* TextModifiers.swift in Sources */,
-				DE5B24EE2513A5F30026E802 /* Composition.rcproject in Sources */,
 				DE7A64862510FE5D00894278 /* StandModeDetector.swift in Sources */,
 				DE7A648C25111AE900894278 /* GameAROverlay.swift in Sources */,
 				DE7A647B2510F18800894278 /* GameHeader.swift in Sources */,
 				DE7A64642510EDEC00894278 /* GameARView.swift in Sources */,
 				DE5B24E625139CEF0026E802 /* MaisonParticuliere.rcproject in Sources */,
+				DE9139172518B4B100F9D52B /* Composition.rcproject in Sources */,
 				DE7A64622510EDEC00894278 /* AppDelegate.swift in Sources */,
+				DE93776A2518A9D40043D842 /* AudioPlayer.swift in Sources */,
 				DE7A648A251116B000894278 /* HelpBlock.swift in Sources */,
 				DE7A64802510F8C500894278 /* ColorExtension.swift in Sources */,
 				DE7A64732510EEAC00894278 /* GameView.swift in Sources */,

@@ -13,11 +13,16 @@ struct GameAROverlay: View {
     
     var body: some View {
         VStack {
-            if !game.hasWin {
+            if game.state == .playing {
                 HelpBlock(type: .ARMode)
             }
             Spacer()
-            ScanBlock(game: game)
+            switch game.state {
+            case .successAudioPlaying:
+                AudioPlayer(game: game)
+            default:
+                ScanBlock(game: game)
+            }
         }
         .padding(EdgeInsets(top: 24, leading: 32, bottom: 24, trailing: 32))
     }

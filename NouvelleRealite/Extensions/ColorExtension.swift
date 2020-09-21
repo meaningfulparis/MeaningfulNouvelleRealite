@@ -15,5 +15,6 @@ extension Color {
     static let nrRedPrimary = Color("RedPrimary")
     static let nrRiver = Color("River")
     static let nrSun = Color("Sun")
+    static let nrLightGrey = Color("LightGrey")
     
 }

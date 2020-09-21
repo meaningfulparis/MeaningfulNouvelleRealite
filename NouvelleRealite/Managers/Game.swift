@@ -9,7 +9,15 @@ import Foundation
 
 class Game: ObservableObject {
     
-    @Published var hasWin:Bool = false
+    enum State {
+        case introduction
+        case playing
+        case successFeedback
+        case successAudioPlaying
+    }
+    
+    @Published var state:Game.State = .introduction
+    var hasWin: Bool { state == .successFeedback || state == .successAudioPlaying }
     @Published var durationDisplay:String = "00:00"
     
     private var gameDuration = 0 {
@@ -30,7 +38,7 @@ class Game: ObservableObject {
     }
     
     private func timerHandler(_ timer:Timer) {
-        guard !hasWin else { return }
+        guard state == .playing else { return }
         gameDuration += 1
     }
     

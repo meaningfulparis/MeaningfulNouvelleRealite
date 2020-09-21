@@ -25,7 +25,12 @@ struct ARViewContainer: UIViewRepresentable {
     func makeUIView(context: Context) -> ARView {
         
         let arView = NRARView(frame: .zero)
-        arView.detectionCallback = { self.game.hasWin = true }
+        arView.detectionCallback = {
+            self.game.state = .successFeedback
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                self.game.state = .successAudioPlaying
+            }
+        }
         
         // Load the "Box" scene from the "Experience" Reality File
         let compositionAnchor = try! Composition.loadBox()

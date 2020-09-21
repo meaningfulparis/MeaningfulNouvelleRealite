@@ -20,13 +20,8 @@ struct ScanBlock: View {
                     NRRectangle(size: size, color: .nrRedPrimary, index: 2, game: game)
                     NRRectangle(size: size, color: .nrSun, index: 1, game: game)
                     NRRectangle(size: size, color: .nrBluePrimary, index: 0, game: game)
-                    if game.hasWin {
-                        Text("Bravo !")
-                            .modifier(SubTitle(color: .nrSkin))
-                    } else {
-                        Text("Scan du tableau en cours...")
-                            .modifier(SubTitle(color: .nrSkin))
-                    }
+                    Text(game.hasWin ? "Bravo !" : "Scan du tableau en cours...")
+                        .modifier(SubTitle(color: .nrSkin))
                 }
                 .frame(width: size.width, height: size.height)
                 .background(Color.nrBluePrimary)

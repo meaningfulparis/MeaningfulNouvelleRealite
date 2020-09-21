@@ -9,7 +9,6 @@ import SwiftUI
 
 struct GameView: View {
     
-    @State var isPlaying:Bool = false
     @ObservedObject var standModeDetector = StandModeDetector()
     @ObservedObject var game = Game()
     
@@ -19,22 +18,18 @@ struct GameView: View {
                 GameHeader(title: "Composition II", game: game)
                 ZStack {
                     Color.nrSkin.edgesIgnoringSafeArea(.bottom)
-                    if isPlaying {
+                    if game.state == .introduction {
+                        GameIntroductionView(startAction: {
+                            game.state = .playing
+                        })
+                    } else {
                         GameARView(game: game)
                         if standModeDetector.isInStandMode {
                             Color.nrSkin.edgesIgnoringSafeArea(.bottom)
                             GameStandView(game: game)
                         } else {
                             GameAROverlay(game: game)
-                                .onTapGesture {
-                                    isPlaying = false
-                                    game.hasWin = false
-                                }
                         }
-                    } else {
-                        GameIntroductionView(startAction: {
-                            isPlaying = true
-                        })
                     }
                 }
             }
