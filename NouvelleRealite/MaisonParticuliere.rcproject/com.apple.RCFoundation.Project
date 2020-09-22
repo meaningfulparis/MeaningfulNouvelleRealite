@@ -24,9 +24,7 @@
                 "children" : {
                   "4A213441-135C-450E-8EF8-1A4EAB267C1D" : null,
                   "6C292EE8-3245-4A35-BF29-E935E3CBB882" : null,
-                  "7F5F1ADC-E5E4-4EF5-A5B5-FC43B071FFA5" : null,
-                  "632E476F-1E55-4E30-9723-1C51DD2E8B89" : null,
-                  "A750E688-842F-4C56-8ED2-BD7707874A3B" : {
+                  "06ECF925-8D41-4F5E-8BF7-D34D3004FD7B" : {
                     "overrides" : {
                       "children" : {
                         "USDScene" : {
@@ -50,7 +48,7 @@
                                 "url",
                                 {
                                   "typeName" : "String",
-                                  "value" : "model:a2c5f1610fbb03a08448b87795e8a774\/scenebc3i9liqu3r01eum.usdz"
+                                  "value" : "model:1e2da0fea5d1d04c7532cbe537c1f611\/redbluechair2.usdz"
                                 }
                               ],
                               [
@@ -70,7 +68,7 @@
                                 "RuntimeIdentifier",
                                 {
                                   "typeName" : "UUID",
-                                  "value" : "B0CD2B8B-BCB1-4C6E-919E-1E529051B8DA"
+                                  "value" : "0E9878BC-416C-4200-A52E-942EBE64729E"
                                 }
                               ]
                             ]
@@ -106,7 +104,7 @@
                           "RuntimeIdentifier",
                           {
                             "typeName" : "UUID",
-                            "value" : "9A27AF36-DE15-4503-8BB3-2706969DCDD1"
+                            "value" : "5B510C99-6C9A-4A9C-8C63-D983842B2CB8"
                           }
                         ]
                       ]
@@ -125,13 +123,16 @@
                         0,
                         0.14000001549720764,
                         0,
-                        0,
-                        0.013892178423702717,
-                        0.036479301750659943,
+                        -0.0068113356828689575,
+                        0.013899845071136951,
+                        -0.0077905715443193913,
                         1
                       ]
                     }
                   },
+                  "7F5F1ADC-E5E4-4EF5-A5B5-FC43B071FFA5" : null,
+                  "632E476F-1E55-4E30-9723-1C51DD2E8B89" : null,
+                  "A750E688-842F-4C56-8ED2-BD7707874A3B" : null,
                   "B91C7CA3-4AB1-4253-9A84-07383168A8A8" : null
                 },
                 "factory" : null,
@@ -162,8 +163,8 @@
                   0.80754858255386353,
                   0,
                   0,
-                  1.135667085647583,
-                  1.5549418926239014,
+                  0.3171103298664093,
+                  0.43418371677398682,
                   1
                 ],
                 "sceneTransform" : [
