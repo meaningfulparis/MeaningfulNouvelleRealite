@@ -23,7 +23,8 @@ struct GameIntroductionView: View {
             ModelViewer()
             HStack() {
                 Spacer()
-                Button("3, 2, 1, C'est parti !", action: startAction).buttonStyle(PrimaryButtonStyle())
+                Button("3, 2, 1, C'est parti !", action: startAction)
+                    .buttonStyle(PrimaryButtonStyle())
                 Spacer()
             }
         }

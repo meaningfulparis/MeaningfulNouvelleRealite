@@ -13,6 +13,7 @@
 		DE305CA925136B1800567372 /* TextModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE305CA825136B1800567372 /* TextModifiers.swift */; };
 		DE305CAE2513708400567372 /* ScanBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE305CAD2513708400567372 /* ScanBlock.swift */; };
 		DE53B5C52519E35B00737E9E /* CompositionMondrian.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = DE53B5C32519E34F00737E9E /* CompositionMondrian.rcproject */; };
+		DE53B5C82519E5E600737E9E /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE53B5C72519E5E600737E9E /* IntExtension.swift */; };
 		DE5B24E625139CEF0026E802 /* MaisonParticuliere.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = DE5B24E425139CB20026E802 /* MaisonParticuliere.rcproject */; };
 		DE7A64622510EDEC00894278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A64612510EDEC00894278 /* AppDelegate.swift */; };
 		DE7A64642510EDEC00894278 /* GameARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A64632510EDEC00894278 /* GameARView.swift */; };
@@ -40,6 +41,7 @@
 		DE305CA825136B1800567372 /* TextModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifiers.swift; sourceTree = "<group>"; };
 		DE305CAD2513708400567372 /* ScanBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanBlock.swift; sourceTree = "<group>"; };
 		DE53B5C32519E34F00737E9E /* CompositionMondrian.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = CompositionMondrian.rcproject; sourceTree = "<group>"; };
+		DE53B5C72519E5E600737E9E /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		DE5B24E425139CB20026E802 /* MaisonParticuliere.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = MaisonParticuliere.rcproject; sourceTree = "<group>"; };
 		DE7A645E2510EDEC00894278 /* NouvelleRealite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NouvelleRealite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7A64612510EDEC00894278 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				DE7A647F2510F8C500894278 /* ColorExtension.swift */,
+				DE53B5C72519E5E600737E9E /* IntExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				DE7A647B2510F18800894278 /* GameHeader.swift in Sources */,
 				DE7A64642510EDEC00894278 /* GameARView.swift in Sources */,
 				DE5B24E625139CEF0026E802 /* MaisonParticuliere.rcproject in Sources */,
+				DE53B5C82519E5E600737E9E /* IntExtension.swift in Sources */,
 				DE7A64622510EDEC00894278 /* AppDelegate.swift in Sources */,
 				DE93776A2518A9D40043D842 /* AudioPlayer.swift in Sources */,
 				DE7A648A251116B000894278 /* HelpBlock.swift in Sources */,

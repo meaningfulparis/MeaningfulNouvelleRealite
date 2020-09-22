@@ -18,15 +18,14 @@ class Game: ObservableObject {
     
     @Published var state:Game.State = .introduction
     var hasWin: Bool { state == .successFeedback || state == .successAudioPlaying }
+    @Published var memoryHelpIsDisplayed:Bool = true
+    
     @Published var durationDisplay:String = "00:00"
+    @Published var memoryHelpRemainingTime = 0
     
     private var gameDuration = 0 {
         didSet {
-            let seconds = gameDuration % 60
-            let secondsDisplay = seconds < 10 ? "0\(seconds)" : "\(seconds)"
-            let minutes = gameDuration / 60
-            let minutesDisplay = minutes < 10 ? "0\(minutes)" : "\(minutes)"
-            let display = "\(minutesDisplay):\(secondsDisplay)"
+            let display = gameDuration.convertToTime()
             DispatchQueue.main.async {
                 self.durationDisplay = display
             }
@@ -40,11 +39,23 @@ class Game: ObservableObject {
     private func timerHandler(_ timer:Timer) {
         guard state == .playing || state == .introduction else { return }
         gameDuration += 1
+        if memoryHelpIsDisplayed {
+            if memoryHelpRemainingTime <= 0 {
+                memoryHelpIsDisplayed = false
+            }
+            memoryHelpRemainingTime -= 1
+        }
     }
     
     func resetGame() {
         state = .introduction
         gameDuration = 0
+    }
+    
+    func getMemoryHelp() {
+        gameDuration += 10
+        memoryHelpRemainingTime = 5
+        memoryHelpIsDisplayed = true
     }
     
 }

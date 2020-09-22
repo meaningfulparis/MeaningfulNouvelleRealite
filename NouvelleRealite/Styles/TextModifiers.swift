@@ -9,11 +9,13 @@ import SwiftUI
 
 struct BigText: ViewModifier {
     
+    var color:Color = .nrOceanBlack
+    
     func body(content: Content) -> some View {
         content
             .font(.custom("Sora-Bold", size: 80))
             .lineSpacing(8)
-            .foregroundColor(.nrOceanBlack)
+            .foregroundColor(color)
     }
     
 }

@@ -50,6 +50,7 @@ class NRARView : ARView, ARSessionDelegate {
     
     required init(frame frameRect: CGRect) {
         super.init(frame: .zero)
+//        #warning("Canvas only")
         self.session.delegate = self
     }
     

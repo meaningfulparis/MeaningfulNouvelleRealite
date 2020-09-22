@@ -43,12 +43,22 @@ struct GameStandView: View {
                 VStack {
                     HelpBlock(type: .StandMode)
                     Spacer()
-                    Text(game.durationDisplay)
-                        .modifier(BigText())
+                    if game.memoryHelpIsDisplayed {
+                        ModelViewer()
+                    } else {
+                        Text(game.durationDisplay)
+                            .modifier(BigText())
+                    }
                     Spacer()
-                    Button("J'ai perdu la mémoire !") {
-                        print("give help")
-                    }.buttonStyle(PrimaryButtonStyle(color: .nrRedPrimary))
+                    if game.memoryHelpIsDisplayed {
+                        Text("\(game.memoryHelpRemainingTime)s")
+                            .modifier(BigText(color: .nrRedPrimary))
+                        Text("Aide mémoire")
+                            .modifier(BodyM())
+                    } else {
+                        Button("J'ai perdu la mémoire !", action: game.getMemoryHelp)
+                            .buttonStyle(PrimaryButtonStyle(color: .nrRedPrimary))
+                    }
                 }.padding(EdgeInsets(top: 24, leading: 32, bottom: 24, trailing: 32))
             }
             .onAppear { isAnimated = true }
