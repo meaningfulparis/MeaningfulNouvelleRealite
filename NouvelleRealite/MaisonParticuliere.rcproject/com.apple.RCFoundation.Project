@@ -11,7 +11,86 @@
                 "url" : "image:12c5d56023e7ebc96980d2ac9ca96981\/maison_1.png"
               },
               "behaviors" : [
+                {
+                  "__content" : [
+                    {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
+                      "actionGroups" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "audioType" : "play",
+                                          "filePath" : "audio:com.apple.rc.audio.miscellaneous.happy-chime-fx-01\/Effet%20Carillon%20joyeux%2001.caf",
+                                          "loops" : false,
+                                          "target" : [
+                                            "5B510C99-6C9A-4A9C-8C63-D983842B2CB8"
+                                          ],
+                                          "volume" : 0.5
+                                        },
+                                        "name" : {
+                                          "arguments" : "stereoBypass",
+                                          "type" : "soundtrack"
+                                        }
+                                      },
+                                      "identifier" : "2122C22E-9818-4109-B891-BF679E03A7B0",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "3AE7D495-B149-4176-B5E2-62AF6C6FA4BC",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ],
+                      "color" : [
+                        0.364705890417099,
+                        0.74117648601531982,
+                        0.69019609689712524,
+                        1
+                      ],
+                      "identifier" : "970B3A88-6B80-4F1A-9E17-FB7282BEEA48",
+                      "isEnabled" : true,
+                      "isLooping" : false,
+                      "isModal" : false,
+                      "name" : "Entrée",
+                      "triggers" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurationBox" : {
+                                "configuration" : {
 
+                                },
+                                "name" : "start"
+                              },
+                              "identifier" : "525399FB-E33C-433D-8CEC-A4D1F3625B36",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ]
+                    }
+                  ],
+                  "__version" : 3
+                }
               ],
               "gravity" : [
                 0,
@@ -150,21 +229,21 @@
               "title" : "Box",
               "viewTransform" : {
                 "cameraTransform" : [
-                  0.99999994039535522,
+                  0.86682391166687012,
                   0,
+                  0.49861428141593933,
                   0,
+                  0.16412003338336945,
+                  0.94427680969238281,
+                  -0.28531709313392639,
                   0,
+                  -0.47082987427711487,
+                  0.32915231585502625,
+                  0.81852173805236816,
                   0,
-                  0.80754858255386353,
-                  -0.58980095386505127,
-                  0,
-                  0,
-                  0.58980095386505127,
-                  0.80754858255386353,
-                  0,
-                  0,
-                  0.3171103298664093,
-                  0.43418371677398682,
+                  -0.72206425666809082,
+                  0.61777770519256592,
+                  1.4150607585906982,
                   1
                 ],
                 "sceneTransform" : [

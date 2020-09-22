@@ -11,7 +11,86 @@
                 "url" : "image:39dbc9f9eefeefc728e799e20430cf6f\/composition1.png"
               },
               "behaviors" : [
+                {
+                  "__content" : [
+                    {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
+                      "actionGroups" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "audioType" : "play",
+                                          "filePath" : "audio:com.apple.rc.audio.miscellaneous.happy-chime-fx-01\/Effet%20Carillon%20joyeux%2001.caf",
+                                          "loops" : false,
+                                          "target" : [
 
+                                          ],
+                                          "volume" : 0.5
+                                        },
+                                        "name" : {
+                                          "arguments" : "stereoBypass",
+                                          "type" : "soundtrack"
+                                        }
+                                      },
+                                      "identifier" : "3FA96CA1-0F4F-4188-B907-80EB8E6D97AF",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "DDA87678-DFF1-4640-A838-896E16F8A7B5",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ],
+                      "color" : [
+                        0.364705890417099,
+                        0.74117648601531982,
+                        0.69019609689712524,
+                        1
+                      ],
+                      "identifier" : "3D8F3D55-D161-4948-8189-DA260A697EAE",
+                      "isEnabled" : true,
+                      "isLooping" : false,
+                      "isModal" : false,
+                      "name" : "Comportement",
+                      "triggers" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurationBox" : {
+                                "configuration" : {
+
+                                },
+                                "name" : "start"
+                              },
+                              "identifier" : "B0F738D4-50A3-4316-BFDE-07FDEBB332AD",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ]
+                    }
+                  ],
+                  "__version" : 3
+                }
               ],
               "gravity" : [
                 0,
@@ -151,21 +230,21 @@
               "title" : "Box",
               "viewTransform" : {
                 "cameraTransform" : [
-                  0.98159939050674438,
-                  1.4901161193847656e-08,
-                  0.1909518837928772,
+                  0.98199927806854248,
+                  1.4901160305669237e-08,
+                  0.18888448178768158,
                   0,
-                  0.027764223515987396,
+                  0.027463627979159355,
                   0.98937302827835083,
-                  -0.14272353053092957,
+                  -0.14278167486190796,
                   0,
-                  -0.18892265856266022,
+                  -0.18687723577022552,
                   0.14539892971515656,
-                  0.97116798162460327,
+                  0.97156363725662231,
                   0,
-                  -0.0014472231268882751,
-                  0.023688964545726776,
-                  0.062702670693397522,
+                  -0.011126694269478321,
+                  0.043729528784751892,
+                  0.1836344301700592,
                   1
                 ],
                 "sceneTransform" : [

@@ -13,5 +13,10 @@
     "libraryIdentifier" : "1e2da0fea5d1d04c7532cbe537c1f611",
     "format" : "model",
     "displayName" : "redbluechair2.usdz"
+  },
+  {
+    "libraryIdentifier" : "eec1f2ac1d3c05dc4eb89975d8cf99b2",
+    "format" : "audio",
+    "displayName" : "mixkit-woodfire-by-the-lake-128.mp3"
   }
 ]

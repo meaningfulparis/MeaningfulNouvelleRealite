@@ -24,7 +24,7 @@ struct GameView: View {
                         })
                     } else {
                         GameARView(game: game)
-                        if standModeDetector.isInStandMode || game.memoryHelpIsDisplayed {
+                        if !game.hasWin && (standModeDetector.isInStandMode || game.memoryHelpIsDisplayed) {
                             Color.nrSkin.edgesIgnoringSafeArea(.bottom)
                             GameStandView(game: game)
                         } else {

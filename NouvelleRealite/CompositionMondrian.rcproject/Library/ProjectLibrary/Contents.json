@@ -18,5 +18,10 @@
     "libraryIdentifier" : "1a7756901847225e67685ba92de45c46",
     "format" : "model",
     "displayName" : "composition.usdz"
+  },
+  {
+    "libraryIdentifier" : "89868fb795f4bfcdb1a4ec32e4e7209b",
+    "format" : "audio",
+    "displayName" : "mixkit-h-k-356.mp3"
   }
 ]
