@@ -32,13 +32,9 @@ struct ARViewContainer: UIViewRepresentable {
             }
         }
         
-        // Load the "Box" scene from the "Experience" Reality File
-        let compositionAnchor = try! Composition.loadBox()
-        let maisonAnchor = try! MaisonParticuliere.loadBox()
-        
         // Add the box anchor to the scene
-        arView.scene.anchors.append(compositionAnchor)
-        arView.scene.anchors.append(maisonAnchor)
+        arView.scene.anchors.append(try! CompositionMondrian.loadBox())
+        arView.scene.anchors.append(try! MaisonParticuliere.loadBox())
         
         return arView
         

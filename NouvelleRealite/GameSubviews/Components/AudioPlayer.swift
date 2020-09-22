@@ -52,9 +52,8 @@ struct AudioPlayer: View {
                             .transformEffect(.init(translationX: 0.9 * barWidth, y: -12))
                     }
                         .padding(.bottom, 16)
-                    Button("Prochaine mission") {
-                        game.state = .introduction
-                    }.buttonStyle(PrimaryButtonStyle())
+                    Button("Prochaine mission", action: game.resetGame)
+                        .buttonStyle(PrimaryButtonStyle())
                 }
                 .padding(.horizontal, 16)
                 .padding(.bottom, 16)

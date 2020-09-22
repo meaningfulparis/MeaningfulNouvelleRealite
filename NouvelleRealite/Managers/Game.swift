@@ -38,8 +38,13 @@ class Game: ObservableObject {
     }
     
     private func timerHandler(_ timer:Timer) {
-        guard state == .playing else { return }
+        guard state == .playing || state == .introduction else { return }
         gameDuration += 1
+    }
+    
+    func resetGame() {
+        state = .introduction
+        gameDuration = 0
     }
     
 }
