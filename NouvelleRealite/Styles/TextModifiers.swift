@@ -29,7 +29,6 @@ struct LargeTitle: ViewModifier {
             .font(.custom("Sora-Bold", size: 40))
             .lineSpacing(8)
             .foregroundColor(color)
-            .textCase(.lowercase)
     }
     
 }
@@ -90,7 +89,7 @@ struct TextModifiers_Previews: PreviewProvider {
     static var previews: some View {
         VStack(alignment: .leading, spacing: 24) {
             Text("01:54").modifier(BigText())
-            Text("Nouvelle\nRéalité").modifier(LargeTitle())
+            Text("nouvelle\nréalité").modifier(LargeTitle())
             Text("Title sur 2 lignes voir plus et bien le voila le résultat").modifier(Title())
             Text("SubTitle sur 2 lignes voir plus et bien le voila le résultat").modifier(SubTitle())
             Text("Body sur 2 lignes voir plus et bien le voila le résultat").modifier(BodyM())

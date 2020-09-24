@@ -2,13 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Sora-Regular.ttf</string>
-		<string>Sora-Bold.ttf</string>
-	</array>
-	<key>NSMotionUsageDescription</key>
-	<string>Afin de vous proposer une meilleure expérience</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -24,11 +17,18 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string></string>
+	<string>Afin de profiter de la réalité augmentée</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Afin de vous proposer une meilleure expérience</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Sora-Regular.ttf</string>
+		<string>Sora-Bold.ttf</string>
+	</array>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
