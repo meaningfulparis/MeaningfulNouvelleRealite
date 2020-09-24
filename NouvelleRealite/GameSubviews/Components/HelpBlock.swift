@@ -19,7 +19,7 @@ struct HelpBlock: View {
     var body: some View {
         HStack(spacing: 16) {
             Group {
-                Image(type == .StandMode ? "StandIcon" : "ScanIcon")
+                Image(type == .StandMode ? "ScanIcon" : "StandIcon")
                     .frame(width: 48, height: 48)
             }
             Text(type.rawValue)
