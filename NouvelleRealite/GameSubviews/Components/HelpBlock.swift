@@ -19,19 +19,22 @@ struct HelpBlock: View {
     var body: some View {
         HStack(spacing: 16) {
             Group {
-                Rectangle()
+                Image(type == .StandMode ? "StandIcon" : "ScanIcon")
                     .frame(width: 48, height: 48)
-                    .foregroundColor(Color.nrSun)
             }
-            Text(type.rawValue).modifier(BodyS())
+            Text(type.rawValue)
+                .modifier(BodyS())
         }
         .padding(16)
-        .background(Color.nrRiver)
+        .background(Color.nrLightGrey)
     }
 }
 
 struct HelpBlock_Previews: PreviewProvider {
     static var previews: some View {
-        HelpBlock(type: .StandMode)
+        Group {
+            HelpBlock(type: .StandMode)
+            HelpBlock(type: .ARMode)
+        }
     }
 }
