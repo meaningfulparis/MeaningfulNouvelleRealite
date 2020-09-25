@@ -31,6 +31,7 @@
 		DE7A648C25111AE900894278 /* GameAROverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A648B25111AE900894278 /* GameAROverlay.swift */; };
 		DE90E5BA25150A3400921E30 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90E5B925150A3400921E30 /* Game.swift */; };
 		DE93776A2518A9D40043D842 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9377692518A9D40043D842 /* AudioPlayer.swift */; };
+		DEFDB62D251DECB60085A987 /* Scenejen.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = DEFDB62C251DECB60085A987 /* Scenejen.rcproject */; };
 		DEFE6BE62519E23A00CE632F /* composition.usdz in Resources */ = {isa = PBXBuildFile; fileRef = DEFE6BE52519E23A00CE632F /* composition.usdz */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		DE7A648B25111AE900894278 /* GameAROverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAROverlay.swift; sourceTree = "<group>"; };
 		DE90E5B925150A3400921E30 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		DE9377692518A9D40043D842 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		DEFDB62C251DECB60085A987 /* Scenejen.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Scenejen.rcproject; sourceTree = "<group>"; };
 		DEFE6BE52519E23A00CE632F /* composition.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = composition.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,8 +115,7 @@
 				DE7A647E2510F8B700894278 /* Extensions */,
 				DE7A64672510EDEE00894278 /* Assets.xcassets */,
 				DEFE6BE52519E23A00CE632F /* composition.usdz */,
-				DE53B5C32519E34F00737E9E /* CompositionMondrian.rcproject */,
-				DE5B24E425139CB20026E802 /* MaisonParticuliere.rcproject */,
+				DEFDB62F251DEFF30085A987 /* ScenesAR */,
 				DE305C9A2513693C00567372 /* Fonts */,
 				DE7A64692510EDEE00894278 /* Preview Content */,
 			);
@@ -178,6 +179,16 @@
 				DE90E5B925150A3400921E30 /* Game.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		DEFDB62F251DEFF30085A987 /* ScenesAR */ = {
+			isa = PBXGroup;
+			children = (
+				DE53B5C32519E34F00737E9E /* CompositionMondrian.rcproject */,
+				DE5B24E425139CB20026E802 /* MaisonParticuliere.rcproject */,
+				DEFDB62C251DECB60085A987 /* Scenejen.rcproject */,
+			);
+			path = ScenesAR;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 				DE305CA925136B1800567372 /* TextModifiers.swift in Sources */,
 				DE7A64862510FE5D00894278 /* StandModeDetector.swift in Sources */,
 				DE7A648C25111AE900894278 /* GameAROverlay.swift in Sources */,
+				DEFDB62D251DECB60085A987 /* Scenejen.rcproject in Sources */,
 				DE7A647B2510F18800894278 /* GameHeader.swift in Sources */,
 				DE7A64642510EDEC00894278 /* GameARView.swift in Sources */,
 				DE5B24E625139CEF0026E802 /* MaisonParticuliere.rcproject in Sources */,

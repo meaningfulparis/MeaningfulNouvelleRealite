@@ -32,9 +32,10 @@ struct ARViewContainer: UIViewRepresentable {
             }
         }
         
-        // Add the box anchor to the scene
+        // Add 3D scenes to the app
         arView.scene.anchors.append(try! CompositionMondrian.loadBox())
         arView.scene.anchors.append(try! MaisonParticuliere.loadBox())
+        // arView.scene.anchors.append(try! Scenejen.loadBox())
         
         return arView
         
