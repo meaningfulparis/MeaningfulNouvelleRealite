@@ -10,12 +10,12 @@ import SwiftUI
 struct GameView: View {
     
     @ObservedObject var standModeDetector = StandModeDetector()
-    @ObservedObject var game = Game()
+    @ObservedObject var game:Game
     
     var body: some View {
         HStack(alignment: .top){
             VStack(spacing: 0) {
-                GameHeader(title: "Composition II", game: game)
+                GameHeader(title: game.selectedChallenge!.name, game: game)
                 ZStack {
                     Color.nrSkin.edgesIgnoringSafeArea(.bottom)
                     if game.state == .introduction {
@@ -39,6 +39,6 @@ struct GameView: View {
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView()
+        GameView(game: Game())
     }
 }

@@ -31,6 +31,11 @@
 		DE7A648C25111AE900894278 /* GameAROverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A648B25111AE900894278 /* GameAROverlay.swift */; };
 		DE90E5BA25150A3400921E30 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90E5B925150A3400921E30 /* Game.swift */; };
 		DE93776A2518A9D40043D842 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9377692518A9D40043D842 /* AudioPlayer.swift */; };
+		DE9D49F4251E3919002F1E83 /* IntroductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D49F3251E3919002F1E83 /* IntroductionView.swift */; };
+		DE9D49FA251E4462002F1E83 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D49F9251E4462002F1E83 /* Header.swift */; };
+		DE9D49FE251E4A3D002F1E83 /* ChallengeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D49FD251E4A3D002F1E83 /* ChallengeCard.swift */; };
+		DE9D4A02251E4A75002F1E83 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D4A01251E4A75002F1E83 /* Challenge.swift */; };
+		DE9D4A06251E4EF1002F1E83 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D4A05251E4EF1002F1E83 /* MainView.swift */; };
 		DEFDB62D251DECB60085A987 /* Scenejen.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = DEFDB62C251DECB60085A987 /* Scenejen.rcproject */; };
 		DEFE6BE62519E23A00CE632F /* composition.usdz in Resources */ = {isa = PBXBuildFile; fileRef = DEFE6BE52519E23A00CE632F /* composition.usdz */; };
 /* End PBXBuildFile section */
@@ -62,6 +67,11 @@
 		DE7A648B25111AE900894278 /* GameAROverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAROverlay.swift; sourceTree = "<group>"; };
 		DE90E5B925150A3400921E30 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		DE9377692518A9D40043D842 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		DE9D49F3251E3919002F1E83 /* IntroductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionView.swift; sourceTree = "<group>"; };
+		DE9D49F9251E4462002F1E83 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		DE9D49FD251E4A3D002F1E83 /* ChallengeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeCard.swift; sourceTree = "<group>"; };
+		DE9D4A01251E4A75002F1E83 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		DE9D4A05251E4EF1002F1E83 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DEFDB62C251DECB60085A987 /* Scenejen.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Scenejen.rcproject; sourceTree = "<group>"; };
 		DEFE6BE52519E23A00CE632F /* composition.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = composition.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +118,9 @@
 				DE7A647C2510F6DA00894278 /* Launch Screen.storyboard */,
 				DE7A646C2510EDEE00894278 /* Info.plist */,
 				DE7A64612510EDEC00894278 /* AppDelegate.swift */,
+				DE9D4A05251E4EF1002F1E83 /* MainView.swift */,
+				DE9D49F3251E3919002F1E83 /* IntroductionView.swift */,
+				DE9D49F2251E38FA002F1E83 /* IntroductionSubviews */,
 				DE7A64722510EEAC00894278 /* GameView.swift */,
 				DE7A64742510F0F800894278 /* GameSubviews */,
 				DE7A64842510FE4A00894278 /* Managers */,
@@ -175,10 +188,36 @@
 		DE7A64842510FE4A00894278 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				DE9D4A00251E4A6C002F1E83 /* Models */,
 				DE7A64852510FE5D00894278 /* StandModeDetector.swift */,
 				DE90E5B925150A3400921E30 /* Game.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		DE9D49F2251E38FA002F1E83 /* IntroductionSubviews */ = {
+			isa = PBXGroup;
+			children = (
+				DE9D49F8251E4450002F1E83 /* Components */,
+			);
+			path = IntroductionSubviews;
+			sourceTree = "<group>";
+		};
+		DE9D49F8251E4450002F1E83 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DE9D49F9251E4462002F1E83 /* Header.swift */,
+				DE9D49FD251E4A3D002F1E83 /* ChallengeCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		DE9D4A00251E4A6C002F1E83 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DE9D4A01251E4A75002F1E83 /* Challenge.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		DEFDB62F251DEFF30085A987 /* ScenesAR */ = {
@@ -265,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE7A64832510F99D00894278 /* PrimaryButtonStyle.swift in Sources */,
+				DE9D49FE251E4A3D002F1E83 /* ChallengeCard.swift in Sources */,
 				DE53B5C52519E35B00737E9E /* CompositionMondrian.rcproject in Sources */,
 				DE90E5BA25150A3400921E30 /* Game.swift in Sources */,
 				DE305CAE2513708400567372 /* ScanBlock.swift in Sources */,
@@ -276,10 +316,14 @@
 				DE7A64642510EDEC00894278 /* GameARView.swift in Sources */,
 				DE5B24E625139CEF0026E802 /* MaisonParticuliere.rcproject in Sources */,
 				DE53B5C82519E5E600737E9E /* IntExtension.swift in Sources */,
+				DE9D4A06251E4EF1002F1E83 /* MainView.swift in Sources */,
+				DE9D4A02251E4A75002F1E83 /* Challenge.swift in Sources */,
 				DE7A64622510EDEC00894278 /* AppDelegate.swift in Sources */,
 				DE93776A2518A9D40043D842 /* AudioPlayer.swift in Sources */,
 				DE7A648A251116B000894278 /* HelpBlock.swift in Sources */,
 				DE7A64802510F8C500894278 /* ColorExtension.swift in Sources */,
+				DE9D49FA251E4462002F1E83 /* Header.swift in Sources */,
+				DE9D49F4251E3919002F1E83 /* IntroductionView.swift in Sources */,
 				DE7A64732510EEAC00894278 /* GameView.swift in Sources */,
 				DE7A64782510F13000894278 /* GameStandView.swift in Sources */,
 				DE7A64762510F11B00894278 /* GameIntroductionView.swift in Sources */,

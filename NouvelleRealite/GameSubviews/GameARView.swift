@@ -51,8 +51,8 @@ class NRARView : ARView, ARSessionDelegate {
     
     required init(frame frameRect: CGRect) {
         super.init(frame: .zero)
-//        #warning("Canvas only")
-        self.session.delegate = self
+        #warning("Canvas only")
+//        self.session.delegate = self
     }
     
     @objc required dynamic init?(coder decoder: NSCoder) {
