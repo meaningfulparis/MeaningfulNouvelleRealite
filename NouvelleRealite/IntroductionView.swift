@@ -22,7 +22,15 @@ struct IntroductionView: View {
             VStack(spacing: 0) {
                 Header()
                 ScrollView(showsIndicators: false) {
-                    VStack {
+                    VStack(spacing: 0) {
+                        HStack(alignment: .top, spacing: 0) {
+                            Circle()
+                                .trim(from: 0, to: 0.5)
+                                .frame(width: 63, height: 63)
+                                .foregroundColor(.nrRiver)
+                                .transformEffect(.init(translationX: 0, y: -16))
+                        }
+                        .frame(idealWidth: .infinity, maxWidth: .infinity, idealHeight: 31, maxHeight: 31)
                         ForEach(challenges) { challenge in
                             ChallengeCard(challenge: challenge, tapHandler: tapOnChallengeCardAction)
                         }
@@ -33,7 +41,6 @@ struct IntroductionView: View {
     }
     
     func tapOnChallengeCardAction(_ challenge:Challenge) {
-        print(challenge)
         game.selectedChallenge = challenge
     }
 }

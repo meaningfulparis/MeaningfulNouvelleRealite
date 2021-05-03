@@ -13,25 +13,31 @@ struct ChallengeCard: View {
     var tapHandler:(Challenge) -> Void
     
     var body: some View {
-        HStack(spacing: 0) {
-            VStack(alignment: .leading) {
-                Text(challenge.type.rawValue).modifier(BodyS())
-                Text(challenge.name).modifier(SubTitle())
+        VStack(spacing: 0) {
+            Rectangle()
+                .frame(width: 6, height: 40)
+                .foregroundColor(.nrLightGrey)
+            HStack(spacing: 0) {
+                VStack(alignment: .leading) {
+                    Text(challenge.type.rawValue).modifier(BodyS())
+                    Text(challenge.name).modifier(SubTitle())
+                }
+                .padding(.all, 32)
+                Spacer()
+                Rectangle()
+                    .frame(width: 5)
+                    .foregroundColor(challenge.color)
+                    .padding(.all, 0)
+                Image("ArrowIcon")
+                    .resizable()
+                    .frame(width: 32, height: 32)
+                    .foregroundColor(challenge.color)
+                    .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
             }
-            .padding(.all, 32)
-            Spacer()
-            Rectangle()
-                .frame(width: 5)
-                .foregroundColor(challenge.color)
-                .padding(.all, 0)
-            Rectangle()
-                .frame(width: 32, height: 32)
-                .foregroundColor(challenge.color)
-                .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
+                .border(challenge.color, width: 5)
+                .padding(EdgeInsets(top: 0, leading: 32, bottom: 0, trailing: 32))
+                .onTapGesture { tapHandler(challenge) }
         }
-            .border(challenge.color, width: 5)
-            .padding(EdgeInsets(top: 20, leading: 32, bottom: 20, trailing: 32))
-            .onTapGesture { tapHandler(challenge) }
     }
 }
 

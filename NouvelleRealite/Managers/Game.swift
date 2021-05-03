@@ -16,7 +16,11 @@ class Game: ObservableObject {
         case successAudioPlaying
     }
     
-    @Published var selectedChallenge:Challenge? = nil
+    @Published var selectedChallenge:Challenge? = nil {
+        didSet {
+            gameDuration = 0
+        }
+    }
     @Published var state:Game.State = .introduction
     var hasWin: Bool { state == .successFeedback || state == .successAudioPlaying }
     @Published var memoryHelpIsDisplayed:Bool = true

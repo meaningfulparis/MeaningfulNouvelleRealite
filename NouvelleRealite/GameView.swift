@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GameView: View {
     
-    @ObservedObject var standModeDetector = StandModeDetector()
+    @StateObject var standModeDetector = StandModeDetector()
     @ObservedObject var game:Game
     
     var body: some View {
