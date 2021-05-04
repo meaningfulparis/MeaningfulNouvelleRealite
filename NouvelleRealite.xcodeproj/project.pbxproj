@@ -127,7 +127,7 @@
 				DE7A64812510F98100894278 /* Styles */,
 				DE7A647E2510F8B700894278 /* Extensions */,
 				DE7A64672510EDEE00894278 /* Assets.xcassets */,
-				DEFE6BE52519E23A00CE632F /* composition.usdz */,
+				DEE601A72641418400D92281 /* ScenesPreview */,
 				DEFDB62F251DEFF30085A987 /* ScenesAR */,
 				DE305C9A2513693C00567372 /* Fonts */,
 				DE7A64692510EDEE00894278 /* Preview Content */,
@@ -218,6 +218,14 @@
 				DE9D4A01251E4A75002F1E83 /* Challenge.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DEE601A72641418400D92281 /* ScenesPreview */ = {
+			isa = PBXGroup;
+			children = (
+				DEFE6BE52519E23A00CE632F /* composition.usdz */,
+			);
+			path = ScenesPreview;
 			sourceTree = "<group>";
 		};
 		DEFDB62F251DEFF30085A987 /* ScenesAR */ = {
