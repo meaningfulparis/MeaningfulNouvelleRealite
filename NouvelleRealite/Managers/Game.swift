@@ -10,6 +10,7 @@ import Foundation
 class Game: ObservableObject {
     
     enum State {
+        case introductionTimer
         case introduction
         case playing
         case successFeedback
@@ -19,15 +20,19 @@ class Game: ObservableObject {
     @Published var selectedChallenge:Challenge? = nil {
         didSet {
             gameDuration = 0
+            timerValue = 3
+            launchTimer()
         }
     }
-    @Published var state:Game.State = .introduction
+    @Published var state:Game.State = .introductionTimer
     var hasWin: Bool { state == .successFeedback || state == .successAudioPlaying }
     @Published var memoryHelpIsDisplayed:Bool = true
     
     @Published var durationDisplay:String = "00:00"
     @Published var memoryHelpRemainingTime = 0
+    @Published var timerValue = 3
     
+    private var timer:Timer? = nil
     private var gameDuration = 0 {
         didSet {
             let display = gameDuration.convertToTime()
@@ -37,23 +42,31 @@ class Game: ObservableObject {
         }
     }
     
-    init() {
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: timerHandler)
+    func launchTimer() {
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: timerHandler)
     }
     
     private func timerHandler(_ timer:Timer) {
-        guard state == .playing || state == .introduction else { return }
-        gameDuration += 1
-        if memoryHelpIsDisplayed {
-            if memoryHelpRemainingTime <= 0 {
-                memoryHelpIsDisplayed = false
+        guard state == .playing || state == .introduction || state == .introductionTimer else { return }
+        if state == .introductionTimer {
+            timerValue -= 1
+            if timerValue == 0 {
+                state = .introduction
             }
-            memoryHelpRemainingTime -= 1
+        } else {
+            gameDuration += 1
+            if memoryHelpIsDisplayed {
+                if memoryHelpRemainingTime <= 0 {
+                    memoryHelpIsDisplayed = false
+                }
+                memoryHelpRemainingTime -= 1
+            }
         }
     }
     
     func resetGame() {
-        state = .introduction
+        state = .introductionTimer
         gameDuration = 0
     }
     

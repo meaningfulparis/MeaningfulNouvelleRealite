@@ -15,6 +15,7 @@
 		DE53B5C52519E35B00737E9E /* CompositionMondrian.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = DE53B5C32519E34F00737E9E /* CompositionMondrian.rcproject */; };
 		DE53B5C82519E5E600737E9E /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE53B5C72519E5E600737E9E /* IntExtension.swift */; };
 		DE5B24E625139CEF0026E802 /* MaisonParticuliere.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = DE5B24E425139CB20026E802 /* MaisonParticuliere.rcproject */; };
+		DE6DE424264986EB00EF8573 /* GameIntroductionTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6DE423264986EB00EF8573 /* GameIntroductionTimerView.swift */; };
 		DE7A64622510EDEC00894278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A64612510EDEC00894278 /* AppDelegate.swift */; };
 		DE7A64642510EDEC00894278 /* GameARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A64632510EDEC00894278 /* GameARView.swift */; };
 		DE7A64682510EDEE00894278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE7A64672510EDEE00894278 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		DE53B5C32519E34F00737E9E /* CompositionMondrian.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = CompositionMondrian.rcproject; sourceTree = "<group>"; };
 		DE53B5C72519E5E600737E9E /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		DE5B24E425139CB20026E802 /* MaisonParticuliere.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = MaisonParticuliere.rcproject; sourceTree = "<group>"; };
+		DE6DE423264986EB00EF8573 /* GameIntroductionTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIntroductionTimerView.swift; sourceTree = "<group>"; };
 		DE7A645E2510EDEC00894278 /* NouvelleRealite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NouvelleRealite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7A64612510EDEC00894278 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE7A64632510EDEC00894278 /* GameARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameARView.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				DE7A64632510EDEC00894278 /* GameARView.swift */,
 				DE7A648B25111AE900894278 /* GameAROverlay.swift */,
 				DE7A64792510F17B00894278 /* Components */,
+				DE6DE423264986EB00EF8573 /* GameIntroductionTimerView.swift */,
 			);
 			path = GameSubviews;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				DE5B24E625139CEF0026E802 /* MaisonParticuliere.rcproject in Sources */,
 				DE53B5C82519E5E600737E9E /* IntExtension.swift in Sources */,
 				DE9D4A06251E4EF1002F1E83 /* MainView.swift in Sources */,
+				DE6DE424264986EB00EF8573 /* GameIntroductionTimerView.swift in Sources */,
 				DE9D4A02251E4A75002F1E83 /* Challenge.swift in Sources */,
 				DE7A64622510EDEC00894278 /* AppDelegate.swift in Sources */,
 				DE93776A2518A9D40043D842 /* AudioPlayer.swift in Sources */,

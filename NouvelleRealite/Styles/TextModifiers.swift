@@ -7,6 +7,18 @@
 
 import SwiftUI
 
+struct TimerText: ViewModifier {
+    
+    var color:Color = .nrOceanBlack
+    
+    func body(content: Content) -> some View {
+        content
+            .font(.custom("Sora-Bold", size: 160))
+            .foregroundColor(color)
+    }
+    
+}
+
 struct BigText: ViewModifier {
     
     var color:Color = .nrOceanBlack

@@ -18,7 +18,9 @@ struct GameView: View {
                 GameHeader(title: game.selectedChallenge!.name, game: game)
                 ZStack {
                     Color.nrSkin.edgesIgnoringSafeArea(.bottom)
-                    if game.state == .introduction {
+                    if game.state == .introductionTimer {
+                        GameIntroductionTimerView(game: game)
+                    } else if game.state == .introduction {
                         GameIntroductionView(startAction: {
                             game.state = .playing
                         })

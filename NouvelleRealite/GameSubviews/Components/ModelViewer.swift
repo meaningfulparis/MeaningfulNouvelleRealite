@@ -49,6 +49,16 @@ struct ModelViewer: UIViewRepresentable {
 //        sceneView.showsStatistics = true
         mainScene.rootNode.addChildNode(scene.rootNode)
         sceneView.scene = mainScene
+//        
+//        let spin = CABasicAnimation(keyPath: "rotation")
+//        // Use from-to to explicitly make a full rotation around z
+//        spin.fromValue = NSValue(scnVector4: SCNVector4(x: 0, y: 0, z: 0, w: 0))
+//        spin.toValue = NSValue(scnVector4: SCNVector4(x: 0, y: 0, z: 0, w: 2 * .pi))
+//        spin.duration = 3
+//        spin.repeatCount = 1
+//        mainScene.rootNode.addAnimation(spin, forKey: "introspin")
+//        
+//        print("-> spin")
         
         return sceneView
     }
