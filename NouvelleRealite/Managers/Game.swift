@@ -7,6 +7,7 @@
 
 import Foundation
 import AVFoundation
+import UIKit
 
 class Game: ObservableObject {
     
@@ -104,6 +105,14 @@ class Game: ObservableObject {
 
         } catch let error {
             print(error.localizedDescription)
+        }
+        switch sound {
+        case .Success:
+            let generator = UIImpactFeedbackGenerator(style: .soft)
+            generator.impactOccurred()
+        case .Timer:
+            let generator = UIImpactFeedbackGenerator(style: .medium)
+            generator.impactOccurred()
         }
     }
     
