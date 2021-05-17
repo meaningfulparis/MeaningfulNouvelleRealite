@@ -15,7 +15,7 @@ struct GameView: View {
     var body: some View {
         HStack(alignment: .top){
             VStack(spacing: 0) {
-                GameHeader(title: game.selectedChallenge!.name, game: game)
+                GameHeader(title: game.selectedChallenge?.name ?? "error", game: game)
                 ZStack {
                     Color.nrSkin.edgesIgnoringSafeArea(.bottom)
                     if game.state == .introductionTimer {

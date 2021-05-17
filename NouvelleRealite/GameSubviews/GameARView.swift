@@ -25,12 +25,7 @@ struct ARViewContainer: UIViewRepresentable {
     func makeUIView(context: Context) -> ARView {
         
         let arView = NRARView(frame: .zero)
-        arView.detectionCallback = {
-            self.game.state = .successFeedback
-            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-                self.game.state = .successAudioPlaying
-            }
-        }
+        arView.detectionCallback = self.game.playerDidWin
         
         // Add 3D scenes to the app
         arView.scene.anchors.append(try! CompositionMondrian.loadBox())

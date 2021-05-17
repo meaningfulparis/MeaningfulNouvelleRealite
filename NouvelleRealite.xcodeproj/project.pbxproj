@@ -37,6 +37,8 @@
 		DE9D49FE251E4A3D002F1E83 /* ChallengeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D49FD251E4A3D002F1E83 /* ChallengeCard.swift */; };
 		DE9D4A02251E4A75002F1E83 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D4A01251E4A75002F1E83 /* Challenge.swift */; };
 		DE9D4A06251E4EF1002F1E83 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D4A05251E4EF1002F1E83 /* MainView.swift */; };
+		DEDA89A62652A1C500245716 /* good.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DEDA89A52652A1C500245716 /* good.mp3 */; };
+		DEDA89A82652A81E00245716 /* timer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DEDA89A72652A81E00245716 /* timer.mp3 */; };
 		DEFDB62D251DECB60085A987 /* Scenejen.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = DEFDB62C251DECB60085A987 /* Scenejen.rcproject */; };
 		DEFE6BE62519E23A00CE632F /* composition.usdz in Resources */ = {isa = PBXBuildFile; fileRef = DEFE6BE52519E23A00CE632F /* composition.usdz */; };
 /* End PBXBuildFile section */
@@ -74,6 +76,8 @@
 		DE9D49FD251E4A3D002F1E83 /* ChallengeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeCard.swift; sourceTree = "<group>"; };
 		DE9D4A01251E4A75002F1E83 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		DE9D4A05251E4EF1002F1E83 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		DEDA89A52652A1C500245716 /* good.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = good.mp3; sourceTree = "<group>"; };
+		DEDA89A72652A81E00245716 /* timer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = timer.mp3; sourceTree = "<group>"; };
 		DEFDB62C251DECB60085A987 /* Scenejen.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Scenejen.rcproject; sourceTree = "<group>"; };
 		DEFE6BE52519E23A00CE632F /* composition.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = composition.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +134,7 @@
 				DE7A647E2510F8B700894278 /* Extensions */,
 				DE7A64672510EDEE00894278 /* Assets.xcassets */,
 				DEE601A72641418400D92281 /* ScenesPreview */,
+				DEDA89A42652A1B600245716 /* Audio */,
 				DEFDB62F251DEFF30085A987 /* ScenesAR */,
 				DE305C9A2513693C00567372 /* Fonts */,
 				DE7A64692510EDEE00894278 /* Preview Content */,
@@ -223,6 +228,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		DEDA89A42652A1B600245716 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				DEDA89A72652A81E00245716 /* timer.mp3 */,
+				DEDA89A52652A1C500245716 /* good.mp3 */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 		DEE601A72641418400D92281 /* ScenesPreview */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,9 +312,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEDA89A82652A81E00245716 /* timer.mp3 in Resources */,
 				DE305C9D2513699400567372 /* Sora-Regular.ttf in Resources */,
 				DE7A647D2510F6DA00894278 /* Launch Screen.storyboard in Resources */,
 				DE7A646B2510EDEE00894278 /* Preview Assets.xcassets in Resources */,
+				DEDA89A62652A1C500245716 /* good.mp3 in Resources */,
 				DE305C9E2513699400567372 /* Sora-Bold.ttf in Resources */,
 				DEFE6BE62519E23A00CE632F /* composition.usdz in Resources */,
 				DE7A64682510EDEE00894278 /* Assets.xcassets in Resources */,

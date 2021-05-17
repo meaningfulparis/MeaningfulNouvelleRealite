@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 class Game: ObservableObject {
     
@@ -17,11 +18,20 @@ class Game: ObservableObject {
         case successAudioPlaying
     }
     
+    enum Sound : String {
+        case Success = "good"
+        case Timer = "timer"
+    }
+    
     @Published var selectedChallenge:Challenge? = nil {
         didSet {
             gameDuration = 0
             timerValue = 3
-            launchTimer()
+            timer?.invalidate()
+            if selectedChallenge != nil {
+                play(sound: .Timer)
+                timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: timerHandler)
+            }
         }
     }
     @Published var state:Game.State = .introductionTimer
@@ -41,10 +51,14 @@ class Game: ObservableObject {
             }
         }
     }
+    private var audioPlayer:AVAudioPlayer?
     
-    func launchTimer() {
-        timer?.invalidate()
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: timerHandler)
+    func playerDidWin() {
+        self.state = .successFeedback
+        play(sound: .Success)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+            self.state = .successAudioPlaying
+        }
     }
     
     private func timerHandler(_ timer:Timer) {
@@ -53,6 +67,9 @@ class Game: ObservableObject {
             timerValue -= 1
             if timerValue == 0 {
                 state = .introduction
+                play(sound: .Success)
+            } else {
+                play(sound: .Timer)
             }
         } else {
             gameDuration += 1
@@ -67,13 +84,27 @@ class Game: ObservableObject {
     
     func resetGame() {
         state = .introductionTimer
-        gameDuration = 0
+        selectedChallenge = nil
     }
     
     func getMemoryHelp() {
         gameDuration += 10
         memoryHelpRemainingTime = 5
         memoryHelpIsDisplayed = true
+    }
+    
+    private func play(sound: Sound) {
+        guard let url = Bundle.main.url(forResource: sound.rawValue, withExtension: "mp3") else { return }
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            audioPlayer = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            guard let player = audioPlayer else { return }
+            player.play()
+
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
     
 }
