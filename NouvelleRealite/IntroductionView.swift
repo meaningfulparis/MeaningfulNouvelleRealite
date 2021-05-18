@@ -10,9 +10,9 @@ import SwiftUI
 struct IntroductionView: View {
     
     let challenges:[Challenge] = [
-        Challenge(type: .reproduction, name: "Reproduction II", color: .nrSun, previewFileName: "composition.usdz", sceneAR: try! CompositionMondrian.loadBox()),
-        Challenge(type: .reproduction, name: "Maison particulière", color: .nrRiver, previewFileName: "composition.usdz", sceneAR: try! MaisonParticuliere.loadBox()),
-        Challenge(type: .creation, name: "L'ovoïde", color: .nrRedPrimary, previewFileName: "composition.usdz", sceneAR: try! CompositionMondrian.loadBox()),
+        Challenge(type: .reproduction, name: "Reproduction II", artist: "Piet Mondrian", color: .nrSun, previewFileName: "composition.usdz", sceneAR: try! CompositionMondrian.loadBox()),
+        Challenge(type: .reproduction, name: "Maison particulière", artist: "Theo van Doesburg", color: .nrRiver, previewFileName: "composition.usdz", sceneAR: try! MaisonParticuliere.loadBox()),
+        Challenge(type: .creation, name: "L'ovoïde", artist: "Georges Vantongerloo", color: .nrRedPrimary, previewFileName: "composition.usdz", sceneAR: try! CompositionMondrian.loadBox()),
     ]
     
     @ObservedObject var game:Game

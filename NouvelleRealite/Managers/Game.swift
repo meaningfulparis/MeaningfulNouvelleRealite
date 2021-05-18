@@ -7,7 +7,7 @@
 
 import Foundation
 import AVFoundation
-import UIKit
+import SwiftUI
 
 class Game: ObservableObject {
     
@@ -16,7 +16,8 @@ class Game: ObservableObject {
         case introduction
         case playing
         case successFeedback
-        case successAudioPlaying
+        case successPanel
+        case successStory
     }
     
     enum Sound : String {
@@ -36,7 +37,7 @@ class Game: ObservableObject {
         }
     }
     @Published var state:Game.State = .introductionTimer
-    var hasWin: Bool { state == .successFeedback || state == .successAudioPlaying }
+    var hasWin: Bool {  [.successFeedback, .successPanel, .successStory].contains{$0 == state} }
     @Published var memoryHelpIsDisplayed:Bool = true
     
     @Published var durationDisplay:String = "00:00"
@@ -57,8 +58,10 @@ class Game: ObservableObject {
     func playerDidWin() {
         self.state = .successFeedback
         play(sound: .Success)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-            self.state = .successAudioPlaying
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            withAnimation {
+                self.state = .successPanel
+            }
         }
     }
     
@@ -84,8 +87,10 @@ class Game: ObservableObject {
     }
     
     func resetGame() {
-        state = .introductionTimer
-        selectedChallenge = nil
+        withAnimation {
+            state = .introductionTimer
+            selectedChallenge = nil
+        }
     }
     
     func getMemoryHelp() {

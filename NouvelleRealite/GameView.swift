@@ -18,12 +18,13 @@ struct GameView: View {
                 GameHeader(title: game.selectedChallenge?.name ?? "error", game: game)
                 ZStack {
                     Color.nrSkin.edgesIgnoringSafeArea(.bottom)
-                    if game.state == .introductionTimer {
-                        GameIntroductionTimerView(game: game)
-                    } else if game.state == .introduction {
+                    if game.state == .introduction || game.state == .introductionTimer {
                         GameIntroductionView(startAction: {
                             game.state = .playing
                         })
+                        if game.state == .introductionTimer {
+                            GameIntroductionTimerView(game: game)
+                        }
                     } else {
                         GameARView(game: game)
                         if !game.hasWin && (standModeDetector.isInStandMode || game.memoryHelpIsDisplayed) {

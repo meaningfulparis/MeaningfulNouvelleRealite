@@ -18,7 +18,9 @@ struct GameAROverlay: View {
             }
             Spacer()
             switch game.state {
-            case .successAudioPlaying:
+            case .successPanel:
+                SuccessPanel(game: game)
+            case .successStory:
                 AudioPlayer(game: game)
             default:
                 ScanBlock(game: game)
@@ -29,7 +31,11 @@ struct GameAROverlay: View {
 }
 
 struct GameAROverlay_Previews: PreviewProvider {
+    
+    static let game = Game()
+    
     static var previews: some View {
-        GameAROverlay(game: Game())
+        game.state = .successPanel
+        return GameAROverlay(game: game)
     }
 }

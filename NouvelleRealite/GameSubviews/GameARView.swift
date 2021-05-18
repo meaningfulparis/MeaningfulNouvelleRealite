@@ -47,7 +47,7 @@ class NRARView : ARView, ARSessionDelegate {
     required init(frame frameRect: CGRect) {
         super.init(frame: .zero)
         #if targetEnvironment(simulator)
-        print("success detection delegate is not connected")
+        print("⚠️ success detection delegate is not connected")
         #else
         self.session.delegate = self
         #endif

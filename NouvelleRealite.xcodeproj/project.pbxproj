@@ -16,6 +16,7 @@
 		DE53B5C82519E5E600737E9E /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE53B5C72519E5E600737E9E /* IntExtension.swift */; };
 		DE5B24E625139CEF0026E802 /* MaisonParticuliere.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = DE5B24E425139CB20026E802 /* MaisonParticuliere.rcproject */; };
 		DE6DE424264986EB00EF8573 /* GameIntroductionTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6DE423264986EB00EF8573 /* GameIntroductionTimerView.swift */; };
+		DE71376D2653F9E000498DE7 /* SuccessPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE71376C2653F9E000498DE7 /* SuccessPanel.swift */; };
 		DE7A64622510EDEC00894278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A64612510EDEC00894278 /* AppDelegate.swift */; };
 		DE7A64642510EDEC00894278 /* GameARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A64632510EDEC00894278 /* GameARView.swift */; };
 		DE7A64682510EDEE00894278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE7A64672510EDEE00894278 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		DE53B5C72519E5E600737E9E /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		DE5B24E425139CB20026E802 /* MaisonParticuliere.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = MaisonParticuliere.rcproject; sourceTree = "<group>"; };
 		DE6DE423264986EB00EF8573 /* GameIntroductionTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIntroductionTimerView.swift; sourceTree = "<group>"; };
+		DE71376C2653F9E000498DE7 /* SuccessPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessPanel.swift; sourceTree = "<group>"; };
 		DE7A645E2510EDEC00894278 /* NouvelleRealite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NouvelleRealite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7A64612510EDEC00894278 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE7A64632510EDEC00894278 /* GameARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameARView.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				DE0737012514F917000B7D95 /* ModelViewer.swift */,
 				DE9377692518A9D40043D842 /* AudioPlayer.swift */,
 				DEDA89A92652AAFF00245716 /* SuccessOverlay.swift */,
+				DE71376C2653F9E000498DE7 /* SuccessPanel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				DE90E5BA25150A3400921E30 /* Game.swift in Sources */,
 				DE305CAE2513708400567372 /* ScanBlock.swift in Sources */,
 				DE305CA925136B1800567372 /* TextModifiers.swift in Sources */,
+				DE71376D2653F9E000498DE7 /* SuccessPanel.swift in Sources */,
 				DE7A64862510FE5D00894278 /* StandModeDetector.swift in Sources */,
 				DE7A648C25111AE900894278 /* GameAROverlay.swift in Sources */,
 				DEFDB62D251DECB60085A987 /* Scenejen.rcproject in Sources */,

@@ -43,6 +43,6 @@ struct ChallengeCard: View {
 
 struct ChallengeCard_Previews: PreviewProvider {
     static var previews: some View {
-        ChallengeCard(challenge: Challenge(type: .creation, name: "Reproduction II", color: .nrSun, previewFileName: "composition.usdz", sceneAR: try! CompositionMondrian.loadBox()), tapHandler: { challenge in print(challenge) })
+        ChallengeCard(challenge: Challenge(type: .creation, name: "Reproduction II", artist: "Piet Mondrian", color: .nrSun, previewFileName: "composition.usdz", sceneAR: try! CompositionMondrian.loadBox()), tapHandler: { challenge in print(challenge) })
     }
 }

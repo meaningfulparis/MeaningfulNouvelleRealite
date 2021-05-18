@@ -19,6 +19,7 @@ struct Challenge : Identifiable {
     let id: UUID = UUID()
     let type:ChallengeType
     let name:String
+    let artist:String
     let color:Color
     let previewFileName:String
     let sceneAR:RealityKit.Scene.AnchorCollection.Element
