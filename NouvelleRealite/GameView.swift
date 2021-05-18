@@ -33,6 +33,7 @@ struct GameView: View {
                             GameAROverlay(game: game)
                         }
                     }
+                    SuccessOverlay(game: game)
                 }
             }
         }
