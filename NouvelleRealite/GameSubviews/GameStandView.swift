@@ -44,7 +44,7 @@ struct GameStandView: View {
                     HelpBlock(type: .StandMode)
                     Spacer()
                     if game.memoryHelpIsDisplayed {
-                        ModelViewer()
+                        ModelViewer(game: game)
                     } else {
                         Text(game.durationDisplay)
                             .modifier(BigText())

@@ -11,7 +11,9 @@ import ARKit
 
 struct ModelViewer: UIViewRepresentable {
     
-    private var sceneView = SCNView(frame: .zero)
+    @ObservedObject var game:Game
+    
+    private let sceneView = SCNView(frame: .zero)
     
     func makeUIView(context: Context) -> SCNView {
         
@@ -32,14 +34,16 @@ struct ModelViewer: UIViewRepresentable {
         ambientLightNode.light?.color = UIColor.lightGray
         mainScene.rootNode.addChildNode(ambientLightNode)
         
-        
-        let scene = SCNScene(named: "composition.usdz")!
+        // Object
+        let previewModelNode = SCNScene(named: "composition.usdz")!.rootNode
+        previewModelNode.name = "previewModel"
+        mainScene.rootNode.addChildNode(previewModelNode)
         
         // Camera
         let cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
         cameraNode.position = SCNVector3(x: 0, y: 0, z: 11)
-        scene.rootNode.addChildNode(cameraNode)
+        mainScene.rootNode.addChildNode(cameraNode)
         
         // Interactions
         sceneView.allowsCameraControl = true
@@ -47,30 +51,34 @@ struct ModelViewer: UIViewRepresentable {
         
         sceneView.backgroundColor = UIColor(named: "Skin")
 //        sceneView.showsStatistics = true
-        mainScene.rootNode.addChildNode(scene.rootNode)
         sceneView.scene = mainScene
-//        
-//        let spin = CABasicAnimation(keyPath: "rotation")
-//        // Use from-to to explicitly make a full rotation around z
-//        spin.fromValue = NSValue(scnVector4: SCNVector4(x: 0, y: 0, z: 0, w: 0))
-//        spin.toValue = NSValue(scnVector4: SCNVector4(x: 0, y: 0, z: 0, w: 2 * .pi))
-//        spin.duration = 3
-//        spin.repeatCount = 1
-//        mainScene.rootNode.addAnimation(spin, forKey: "introspin")
-//        
-//        print("-> spin")
         
         return sceneView
     }
     
-    func updateUIView(_ uiView: SCNView, context: Context) {}
+    func updateUIView(_ uiView: SCNView, context: Context) {
+//        if game.timerValue == 0 && game.durationDisplay == "00:00" {
+//            print("=> introduction")
+//            let spin = CABasicAnimation(keyPath: "rotation")
+//            spin.fromValue = SCNVector4(0, 0, 0, Float.pi/2)
+//            spin.toValue = SCNVector4(0, 0, 0, 0)
+////            // Use from-to to explicitly make a full rotation around z
+////            spin.fromValue = NSValue(scnVector4: SCNVector4(x: 0, y: 0, z: 0, w: 0))
+////            spin.toValue = NSValue(scnVector4: SCNVector4(x: 0, y: 0, z: 0, w: .pi))
+//            spin.duration = 3
+//            spin.repeatCount = .infinity
+//            let previewModel = uiView.scene?.rootNode.childNode(withName: "previewModel", recursively: false)
+////            previewModel?.addAnimation(spin, forKey: "introspin")
+//            sceneView.scene?.rootNode.rotation = SCNVector4(0, 0, 0, Float.pi * 2)
+//        }
+    }
     
 }
 
 #if DEBUG
 struct ModelViewer_Previews : PreviewProvider {
     static var previews: some View {
-        ModelViewer()
+        ModelViewer(game: Game())
     }
 }
 #endif

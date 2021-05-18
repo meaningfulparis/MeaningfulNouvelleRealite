@@ -9,6 +9,8 @@ import SwiftUI
 
 struct GameIntroductionView: View {
     
+    @ObservedObject var game:Game
+    
     let startAction:() -> Void
     
     var body: some View {
@@ -20,7 +22,7 @@ struct GameIntroductionView: View {
                     .modifier(Title(color: .nrBluePrimary))
             }
             .padding(EdgeInsets(top: 0, leading: 32, bottom: 0, trailing: 32))
-            ModelViewer()
+            ModelViewer(game: game)
             HStack() {
                 Spacer()
                 Button("3, 2, 1, C'est parti !", action: startAction)
@@ -34,7 +36,7 @@ struct GameIntroductionView: View {
 
 struct GameIntroductionView_Previews: PreviewProvider {
     static var previews: some View {
-        GameIntroductionView(startAction: {
+        GameIntroductionView(game: Game(), startAction: {
             print("gooooo")
         })
     }
