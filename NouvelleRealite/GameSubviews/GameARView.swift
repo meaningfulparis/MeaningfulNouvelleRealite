@@ -46,8 +46,11 @@ class NRARView : ARView, ARSessionDelegate {
     
     required init(frame frameRect: CGRect) {
         super.init(frame: .zero)
-        #warning("Disable for canvas only")
+        #if targetEnvironment(simulator)
+        print("success detection delegate is not connected")
+        #else
         self.session.delegate = self
+        #endif
     }
     
     @objc required dynamic init?(coder decoder: NSCoder) {
