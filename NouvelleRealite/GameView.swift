@@ -22,9 +22,9 @@ struct GameView: View {
                         GameIntroductionView(game: game, startAction: {
                             game.state = .playing
                         })
-//                        if game.state == .introductionTimer {
-//                            GameIntroductionTimerView(game: game)
-//                        }
+                        if game.state == .introductionTimer {
+                            GameIntroductionTimerView(game: game)
+                        }
                     } else {
                         GameARView(game: game)
                         if !game.hasWin && (standModeDetector.isInStandMode || game.memoryHelpIsDisplayed) {

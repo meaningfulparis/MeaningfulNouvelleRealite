@@ -107,8 +107,7 @@
                   "605AEA86-811C-4268-B37C-556FA1834B1C" : null,
                   "632E476F-1E55-4E30-9723-1C51DD2E8B89" : null,
                   "625564CC-C314-43C0-86E3-3A926F5A0746" : null,
-                  "B91C7CA3-4AB1-4253-9A84-07383168A8A8" : null,
-                  "BF309E1F-14D7-4D2D-BB03-57C95E14A8F9" : {
+                  "B2EB3D3D-8AA8-4173-BC55-F792A876CAA4" : {
                     "overrides" : {
                       "children" : {
                         "USDScene" : {
@@ -132,7 +131,7 @@
                                 "url",
                                 {
                                   "typeName" : "String",
-                                  "value" : "model:1a7756901847225e67685ba92de45c46\/composition.usdz"
+                                  "value" : "model:c4ef24c0e2d7869cdfbe440e64e9c68d\/composition_only.usdz"
                                 }
                               ],
                               [
@@ -152,24 +151,24 @@
                                 "RuntimeIdentifier",
                                 {
                                   "typeName" : "UUID",
-                                  "value" : "95DF22A5-AFCE-4404-8E30-848502762635"
+                                  "value" : "B33E53AA-3FE5-4750-A778-E7C6E06455C3"
                                 }
                               ]
                             ]
                           },
                           "transform" : {
                             "matrix" : [
-                              0.0099999997764825821,
+                              1,
                               0,
                               0,
                               0,
                               0,
-                              0.0099999997764825821,
+                              1,
                               0,
                               0,
                               0,
                               0,
-                              0.0099999997764825821,
+                              1,
                               0,
                               0,
                               0,
@@ -188,32 +187,34 @@
                           "RuntimeIdentifier",
                           {
                             "typeName" : "UUID",
-                            "value" : "9075D111-F86D-4D4E-B2DD-8D648718DB85"
+                            "value" : "D364A56B-4EBA-467A-B0C0-C54B77513EA6"
                           }
                         ]
                       ]
                     },
                     "transform" : {
                       "matrix" : [
-                        1.5000001192092896,
+                        0.0099999997764825821,
                         0,
                         0,
                         0,
                         0,
-                        1.5000001192092896,
+                        0.0099999997764825821,
                         0,
                         0,
                         0,
                         0,
-                        1.5000001192092896,
+                        0.0099999997764825821,
                         0,
-                        0.00080329924821853638,
                         0,
+                        0.0099999997764825821,
                         0,
                         1
                       ]
                     }
-                  }
+                  },
+                  "B91C7CA3-4AB1-4253-9A84-07383168A8A8" : null,
+                  "BF309E1F-14D7-4D2D-BB03-57C95E14A8F9" : null
                 },
                 "factory" : null,
                 "runtimeAttributes" : [

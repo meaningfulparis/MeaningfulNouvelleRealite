@@ -26,6 +26,7 @@ struct ARViewContainer: UIViewRepresentable {
         
         let arView = NRARView(frame: .zero)
         arView.detectionCallback = self.game.playerDidWin
+        arView.environment.lighting.intensityExponent = 5
         
         // Add 3D scenes to the app
         arView.scene.anchors.append(try! CompositionMondrian.loadBox())

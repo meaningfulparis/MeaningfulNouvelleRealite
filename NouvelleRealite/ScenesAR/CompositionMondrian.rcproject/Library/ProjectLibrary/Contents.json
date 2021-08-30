@@ -23,5 +23,10 @@
     "libraryIdentifier" : "89868fb795f4bfcdb1a4ec32e4e7209b",
     "format" : "audio",
     "displayName" : "mixkit-h-k-356.mp3"
+  },
+  {
+    "libraryIdentifier" : "c4ef24c0e2d7869cdfbe440e64e9c68d",
+    "format" : "model",
+    "displayName" : "composition_only.usdz"
   }
 ]
