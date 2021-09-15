@@ -10,8 +10,8 @@ import SwiftUI
 struct IntroductionView: View {
     
     let challenges:[Challenge] = [
-        Challenge(type: .reproduction, name: "Reproduction II", artist: "Piet Mondrian", color: .nrSun, previewFileName: "composition.usdz", sceneAR: try! CompositionMondrian.loadBox()),
-        Challenge(type: .reproduction, name: "Maison particulière", artist: "Theo van Doesburg", color: .nrRiver, previewFileName: "composition.usdz", sceneAR: try! MaisonParticuliere.loadBox()),
+        Challenge(type: .reproduction, name: "Composition", artist: "Piet Mondrian", color: .nrSun, previewFileName: "composition.usdz", sceneAR: try! CompositionMondrian.loadBox()),
+        Challenge(type: .reproduction, name: "Chaise Rietveld", artist: "Gerrit Rietveld", color: .nrRiver, previewFileName: "composition.usdz", sceneAR: try! MaisonParticuliere.loadBox()),
         Challenge(type: .creation, name: "L'ovoïde", artist: "Georges Vantongerloo", color: .nrRedPrimary, previewFileName: "composition.usdz", sceneAR: try! CompositionMondrian.loadBox()),
     ]
     
