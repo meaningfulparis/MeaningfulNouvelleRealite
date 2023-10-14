@@ -63,9 +63,9 @@ struct GameStandView: View {
             .onAppear { isAnimated = true }
             .onChange(of: game.memoryHelpIsDisplayed) { oldValue, newValue in
                 if newValue {
-                    openWindow(id: "reality-preview")
+                    openWindow(id: NouvelleRealiteApp.PreviewWindow)
                 } else {
-                    dismissWindow(id: "reality-preview")
+                    dismissWindow(id: NouvelleRealiteApp.PreviewWindow)
                 }
             }
         })

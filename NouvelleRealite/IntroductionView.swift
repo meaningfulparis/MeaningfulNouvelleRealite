@@ -9,6 +9,8 @@ import SwiftUI
 
 struct IntroductionView: View {
     
+    @Environment(\.openImmersiveSpace) var openImmersiveSpace
+    
     let challenges:[Challenge] = [
         Challenge(type: .reproduction, name: "Composition", artist: "Piet Mondrian", color: .nrSun, previewFileName: "composition.usdz", sceneAR: try! CompositionMondrian.loadBox()),
         Challenge(type: .reproduction, name: "Chaise Rietveld", artist: "Gerrit Rietveld", color: .nrRiver, previewFileName: "composition.usdz", sceneAR: try! MaisonParticuliere.loadBox()),
@@ -42,6 +44,12 @@ struct IntroductionView: View {
     
     func tapOnChallengeCardAction(_ challenge:Challenge) {
         game.selectedChallenge = challenge
+        Task {
+            let result = await openImmersiveSpace(id: NouvelleRealiteApp.GameSpace)
+            if case .error = result {
+                print("An error occurred")
+            }
+        }
     }
 }
 

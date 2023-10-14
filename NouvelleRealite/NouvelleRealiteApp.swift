@@ -10,6 +10,9 @@ import SwiftUI
 @main
 struct NouvelleRealiteApp: App {
     
+    static let PreviewWindow = "reality-preview"
+    static let GameSpace = "game-immersive-space"
+    
     var body: some Scene {
         WindowGroup {
             MainView()
@@ -17,14 +20,16 @@ struct NouvelleRealiteApp: App {
         .defaultSize(width: 600, height: 1000)
         .windowResizability(.contentSize)
         
-        WindowGroup(id: "reality-preview") {
+        WindowGroup(id: NouvelleRealiteApp.PreviewWindow) {
             ModelPreview()
         }
         .windowStyle(.volumetric)
         .defaultSize(width: 0.5, height: 0.5, depth: 0.25, in: .meters)
-
-//        ImmersiveSpace(id: "ImmersiveSpace") {
-//            ImmersiveView()
-//        }.immersionStyle(selection: .constant(.progressive), in: .progressive)
+        
+        ImmersiveSpace(id: NouvelleRealiteApp.GameSpace) {
+            
+        }
+        .immersionStyle(selection: .constant(.mixed), in: .mixed)
     }
+    
 }

@@ -27,7 +27,7 @@ struct GameView: View {
                         } else {
                             GameIntroductionView(game: game, startAction: {
                                 game.state = .playing
-                                dismissWindow(id: "reality-preview")
+                                dismissWindow(id: NouvelleRealiteApp.PreviewWindow)
                             })
                         }
                     } else {

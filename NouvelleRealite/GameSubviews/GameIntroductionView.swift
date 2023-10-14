@@ -40,7 +40,7 @@ struct GameIntroductionView: View {
         }
         .padding(EdgeInsets(top: 24, leading: 0, bottom: 24, trailing: 0))
         .onAppear {
-            openWindow(id: "reality-preview")
+            openWindow(id: NouvelleRealiteApp.PreviewWindow)
         }
     }
 }
