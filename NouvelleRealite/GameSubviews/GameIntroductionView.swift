@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import RealityKit
 
 struct GameIntroductionView: View {
+    
+    @Environment(\.openWindow) private var openWindow
     
     @ObservedObject var game:Game
     
@@ -22,7 +25,12 @@ struct GameIntroductionView: View {
                     .modifier(Title(color: .nrBluePrimary))
             }
             .padding(EdgeInsets(top: 0, leading: 32, bottom: 0, trailing: 32))
+            #if os(iOS)
             ModelViewer(game: game)
+            #else
+            Spacer()
+//            RealityPreview()
+            #endif
             HStack() {
                 Spacer()
                 Button("3, 2, 1, C'est parti !", action: startAction)
@@ -31,6 +39,9 @@ struct GameIntroductionView: View {
             }
         }
         .padding(EdgeInsets(top: 24, leading: 0, bottom: 24, trailing: 0))
+        .onAppear {
+            openWindow(id: "reality-preview")
+        }
     }
 }
 

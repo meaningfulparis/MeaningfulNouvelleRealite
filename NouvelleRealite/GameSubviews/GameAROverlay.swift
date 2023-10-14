@@ -13,10 +13,10 @@ struct GameAROverlay: View {
     
     var body: some View {
         VStack {
-            if game.state == .playing {
-                HelpBlock(type: .ARMode)
-            }
-            Spacer()
+//            if game.state == .playing {
+//                HelpBlock(type: .ARMode)
+//            }
+//            Spacer()
             switch game.state {
             case .successPanel:
                 SuccessPanel(game: game)
@@ -26,7 +26,7 @@ struct GameAROverlay: View {
                 ScanBlock(game: game)
             }
         }
-        .padding(EdgeInsets(top: 24, leading: 32, bottom: 24, trailing: 32))
+//        .padding(EdgeInsets(top: 24, leading: 32, bottom: 24, trailing: 32))
     }
 }
 

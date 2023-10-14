@@ -10,7 +10,7 @@ import SwiftUI
 struct HelpBlock: View {
     
     enum InfoType : String {
-        case StandMode = "Attrapez votre téléphone pour scanner votre réalisation et accéder à la récompense en AR !"
+        case StandMode = "Recréez le tableau de mémoire avec vos legos afin de débloquer une récompense secrète !"
         case ARMode = "Posez votre téléphone sur un support ou sur la table pour passer en mode socle"
     }
     

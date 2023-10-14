@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE0737022514F917000B7D95 /* ModelViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0737012514F917000B7D95 /* ModelViewer.swift */; };
 		DE305C9D2513699400567372 /* Sora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE305C9B2513699400567372 /* Sora-Regular.ttf */; };
 		DE305C9E2513699400567372 /* Sora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE305C9C2513699400567372 /* Sora-Bold.ttf */; };
 		DE305CA925136B1800567372 /* TextModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE305CA825136B1800567372 /* TextModifiers.swift */; };
@@ -17,7 +16,6 @@
 		DE5B24E625139CEF0026E802 /* MaisonParticuliere.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = DE5B24E425139CB20026E802 /* MaisonParticuliere.rcproject */; };
 		DE6DE424264986EB00EF8573 /* GameIntroductionTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6DE423264986EB00EF8573 /* GameIntroductionTimerView.swift */; };
 		DE71376D2653F9E000498DE7 /* SuccessPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE71376C2653F9E000498DE7 /* SuccessPanel.swift */; };
-		DE7A64622510EDEC00894278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A64612510EDEC00894278 /* AppDelegate.swift */; };
 		DE7A64642510EDEC00894278 /* GameARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A64632510EDEC00894278 /* GameARView.swift */; };
 		DE7A64682510EDEE00894278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE7A64672510EDEE00894278 /* Assets.xcassets */; };
 		DE7A646B2510EDEE00894278 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE7A646A2510EDEE00894278 /* Preview Assets.xcassets */; };
@@ -31,6 +29,8 @@
 		DE7A64862510FE5D00894278 /* StandModeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A64852510FE5D00894278 /* StandModeDetector.swift */; };
 		DE7A648A251116B000894278 /* HelpBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A6489251116B000894278 /* HelpBlock.swift */; };
 		DE7A648C25111AE900894278 /* GameAROverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A648B25111AE900894278 /* GameAROverlay.swift */; };
+		DE8171EA2AD9A52000997FAD /* NouvelleRealiteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8171E92AD9A52000997FAD /* NouvelleRealiteApp.swift */; };
+		DE8171EC2AD9A5E900997FAD /* ModelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8171EB2AD9A5E900997FAD /* ModelPreview.swift */; };
 		DE90E5BA25150A3400921E30 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90E5B925150A3400921E30 /* Game.swift */; };
 		DE93776A2518A9D40043D842 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9377692518A9D40043D842 /* AudioPlayer.swift */; };
 		DE9D49F4251E3919002F1E83 /* IntroductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D49F3251E3919002F1E83 /* IntroductionView.swift */; };
@@ -72,6 +72,8 @@
 		DE7A64852510FE5D00894278 /* StandModeDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandModeDetector.swift; sourceTree = "<group>"; };
 		DE7A6489251116B000894278 /* HelpBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpBlock.swift; sourceTree = "<group>"; };
 		DE7A648B25111AE900894278 /* GameAROverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAROverlay.swift; sourceTree = "<group>"; };
+		DE8171E92AD9A52000997FAD /* NouvelleRealiteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NouvelleRealiteApp.swift; sourceTree = "<group>"; };
+		DE8171EB2AD9A5E900997FAD /* ModelPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPreview.swift; sourceTree = "<group>"; };
 		DE90E5B925150A3400921E30 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		DE9377692518A9D40043D842 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		DE9D49F3251E3919002F1E83 /* IntroductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionView.swift; sourceTree = "<group>"; };
@@ -128,6 +130,8 @@
 				DE7A647C2510F6DA00894278 /* Launch Screen.storyboard */,
 				DE7A646C2510EDEE00894278 /* Info.plist */,
 				DE7A64612510EDEC00894278 /* AppDelegate.swift */,
+				DE8171E92AD9A52000997FAD /* NouvelleRealiteApp.swift */,
+				DEDA1F8D2ADB07CE00FF8C21 /* RealityViews */,
 				DE9D4A05251E4EF1002F1E83 /* MainView.swift */,
 				DE9D49F3251E3919002F1E83 /* IntroductionView.swift */,
 				DE9D49F2251E38FA002F1E83 /* IntroductionSubviews */,
@@ -232,6 +236,14 @@
 				DE9D4A01251E4A75002F1E83 /* Challenge.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DEDA1F8D2ADB07CE00FF8C21 /* RealityViews */ = {
+			isa = PBXGroup;
+			children = (
+				DE8171EB2AD9A5E900997FAD /* ModelPreview.swift */,
+			);
+			path = RealityViews;
 			sourceTree = "<group>";
 		};
 		DEDA89A42652A1B600245716 /* Audio */ = {
@@ -343,6 +355,7 @@
 				DE305CAE2513708400567372 /* ScanBlock.swift in Sources */,
 				DE305CA925136B1800567372 /* TextModifiers.swift in Sources */,
 				DE71376D2653F9E000498DE7 /* SuccessPanel.swift in Sources */,
+				DE8171EC2AD9A5E900997FAD /* ModelPreview.swift in Sources */,
 				DE7A64862510FE5D00894278 /* StandModeDetector.swift in Sources */,
 				DE7A648C25111AE900894278 /* GameAROverlay.swift in Sources */,
 				DEFDB62D251DECB60085A987 /* Scenejen.rcproject in Sources */,
@@ -353,9 +366,9 @@
 				DE9D4A06251E4EF1002F1E83 /* MainView.swift in Sources */,
 				DE6DE424264986EB00EF8573 /* GameIntroductionTimerView.swift in Sources */,
 				DE9D4A02251E4A75002F1E83 /* Challenge.swift in Sources */,
-				DE7A64622510EDEC00894278 /* AppDelegate.swift in Sources */,
 				DE93776A2518A9D40043D842 /* AudioPlayer.swift in Sources */,
 				DE7A648A251116B000894278 /* HelpBlock.swift in Sources */,
+				DE8171EA2AD9A52000997FAD /* NouvelleRealiteApp.swift in Sources */,
 				DE7A64802510F8C500894278 /* ColorExtension.swift in Sources */,
 				DE9D49FA251E4462002F1E83 /* Header.swift in Sources */,
 				DE9D49F4251E3919002F1E83 /* IntroductionView.swift in Sources */,
@@ -363,7 +376,6 @@
 				DE7A64782510F13000894278 /* GameStandView.swift in Sources */,
 				DE7A64762510F11B00894278 /* GameIntroductionView.swift in Sources */,
 				DEDA89AA2652AAFF00245716 /* SuccessOverlay.swift in Sources */,
-				DE0737022514F917000B7D95 /* ModelViewer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +433,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -476,7 +488,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -497,7 +509,7 @@
 				DEVELOPMENT_TEAM = AU9T7HA2AB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = NouvelleRealite/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -505,8 +517,10 @@
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.romainpenchenat.NouvelleRealite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,7";
 			};
 			name = Debug;
 		};
@@ -521,7 +535,7 @@
 				DEVELOPMENT_TEAM = AU9T7HA2AB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = NouvelleRealite/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -529,8 +543,10 @@
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.romainpenchenat.NouvelleRealite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,7";
 			};
 			name = Release;
 		};

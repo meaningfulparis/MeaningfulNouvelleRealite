@@ -9,6 +9,9 @@ import SwiftUI
 
 struct GameView: View {
     
+    
+    @Environment(\.dismissWindow) private var dismissWindow
+    
     @StateObject var standModeDetector = StandModeDetector()
     @ObservedObject var game:Game
     
@@ -19,20 +22,22 @@ struct GameView: View {
                 ZStack {
                     Color.nrSkin.edgesIgnoringSafeArea(.bottom)
                     if game.state == .introduction || game.state == .introductionTimer {
-                        GameIntroductionView(game: game, startAction: {
-                            game.state = .playing
-                        })
                         if game.state == .introductionTimer {
                             GameIntroductionTimerView(game: game)
+                        } else {
+                            GameIntroductionView(game: game, startAction: {
+                                game.state = .playing
+                                dismissWindow(id: "reality-preview")
+                            })
                         }
                     } else {
-                        GameARView(game: game)
-                        if !game.hasWin && (standModeDetector.isInStandMode || game.memoryHelpIsDisplayed) {
-                            Color.nrSkin.edgesIgnoringSafeArea(.bottom)
+//                        GameARView(game: game)
+//                        if !game.hasWin && (standModeDetector.isInStandMode || game.memoryHelpIsDisplayed) {
+//                            Color.nrSkin.edgesIgnoringSafeArea(.bottom)
                             GameStandView(game: game)
-                        } else {
-                            GameAROverlay(game: game)
-                        }
+//                        } else {
+//                            GameAROverlay(game: game)
+//                        }
                     }
                     SuccessOverlay(game: game)
                 }

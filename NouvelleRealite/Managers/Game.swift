@@ -113,11 +113,13 @@ class Game: ObservableObject {
         }
         switch sound {
         case .Success:
-            let generator = UIImpactFeedbackGenerator(style: .soft)
-            generator.impactOccurred()
+//            let generator = UIImpactFeedbackGenerator(style: .soft)
+//            generator.impactOccurred()
+            break
         case .Timer:
-            let generator = UIImpactFeedbackGenerator(style: .medium)
-            generator.impactOccurred()
+//            let generator = UIImpactFeedbackGenerator(style: .medium)
+//            generator.impactOccurred()
+            break
         }
     }
     
