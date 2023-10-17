@@ -27,7 +27,7 @@ struct NouvelleRealiteApp: App {
         .defaultSize(width: 0.5, height: 0.5, depth: 0.25, in: .meters)
         
         ImmersiveSpace(id: NouvelleRealiteApp.GameSpace) {
-            
+            GameImmersiveView()
         }
         .immersionStyle(selection: .constant(.mixed), in: .mixed)
     }
