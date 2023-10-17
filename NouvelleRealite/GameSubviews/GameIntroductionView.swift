@@ -26,7 +26,7 @@ struct GameIntroductionView: View {
             }
             .padding(EdgeInsets(top: 0, leading: 32, bottom: 0, trailing: 32))
             #if os(iOS)
-            ModelViewer(game: game)
+//            ModelViewer(game: game)
             #else
             Spacer()
             #endif

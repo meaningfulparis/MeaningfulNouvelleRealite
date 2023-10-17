@@ -51,7 +51,7 @@ struct GameStandView: View {
                         .modifier(BigText())
                     #else
                     if game.memoryHelpIsDisplayed {
-                        ModelViewer(game: game)
+//                        ModelViewer(game: game)
                     } else {
                         Text(game.durationDisplay)
                             .modifier(BigText())

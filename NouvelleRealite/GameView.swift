@@ -36,7 +36,7 @@ struct GameView: View {
                         #if os(visionOS)
                         GameStandView(game: game)
                         #else
-                        GameARView(game: game)
+//                        GameARView(game: game)
                         if !game.hasWin && (standModeDetector.isInStandMode || game.memoryHelpIsDisplayed) {
                             Color.nrSkin.edgesIgnoringSafeArea(.bottom)
                             GameStandView(game: game)
