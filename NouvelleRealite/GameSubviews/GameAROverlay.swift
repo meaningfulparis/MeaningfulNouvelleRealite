@@ -12,11 +12,21 @@ struct GameAROverlay: View {
     @ObservedObject var game:Game
     
     var body: some View {
+        #if os(visionOS)
+        switch game.state {
+        case .successPanel:
+            SuccessPanel(game: game)
+        case .successStory:
+            AudioPlayer(game: game)
+        default:
+            ScanBlock(game: game)
+        }
+        #else
         VStack {
-//            if game.state == .playing {
-//                HelpBlock(type: .ARMode)
-//            }
-//            Spacer()
+            if game.state == .playing {
+                HelpBlock(type: .ARMode)
+            }
+            Spacer()
             switch game.state {
             case .successPanel:
                 SuccessPanel(game: game)
@@ -26,7 +36,8 @@ struct GameAROverlay: View {
                 ScanBlock(game: game)
             }
         }
-//        .padding(EdgeInsets(top: 24, leading: 32, bottom: 24, trailing: 32))
+        .padding(EdgeInsets(top: 24, leading: 32, bottom: 24, trailing: 32))
+        #endif
     }
 }
 

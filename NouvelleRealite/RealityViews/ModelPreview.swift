@@ -9,6 +9,7 @@ import SwiftUI
 import RealityKit
 import SceneKit
 
+#if os(visionOS)
 struct ModelPreview: View {
     var body: some View {
         RealityView { content in
@@ -25,3 +26,4 @@ struct ModelPreview: View {
 #Preview {
     ModelPreview()
 }
+#endif

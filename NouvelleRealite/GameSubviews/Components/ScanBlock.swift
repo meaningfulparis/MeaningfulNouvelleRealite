@@ -13,7 +13,11 @@ struct ScanBlock: View {
     
     var body: some View {
         GeometryReader(content: { geometry in
+            #if os(visionOS)
             let size = CGSize(width: geometry.size.width, height: geometry.size.height)
+            #else
+            let size = CGSize(width: geometry.size.width, height: 48)
+            #endif
             VStack {
                 Spacer()
                 ZStack {

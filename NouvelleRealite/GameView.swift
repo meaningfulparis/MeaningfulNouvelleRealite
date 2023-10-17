@@ -27,17 +27,23 @@ struct GameView: View {
                         } else {
                             GameIntroductionView(game: game, startAction: {
                                 game.state = .playing
+                                #if os(visionOS)
                                 dismissWindow(id: NouvelleRealiteApp.PreviewWindow)
+                                #endif
                             })
                         }
                     } else {
-//                        GameARView(game: game)
-//                        if !game.hasWin && (standModeDetector.isInStandMode || game.memoryHelpIsDisplayed) {
-//                            Color.nrSkin.edgesIgnoringSafeArea(.bottom)
+                        #if os(visionOS)
+                        GameStandView(game: game)
+                        #else
+                        GameARView(game: game)
+                        if !game.hasWin && (standModeDetector.isInStandMode || game.memoryHelpIsDisplayed) {
+                            Color.nrSkin.edgesIgnoringSafeArea(.bottom)
                             GameStandView(game: game)
-//                        } else {
-//                            GameAROverlay(game: game)
-//                        }
+                        } else {
+                            GameAROverlay(game: game)
+                        }
+                        #endif
                     }
                     SuccessOverlay(game: game)
                 }

@@ -111,16 +111,18 @@ class Game: ObservableObject {
         } catch let error {
             print(error.localizedDescription)
         }
+        #if os(iOS)
         switch sound {
         case .Success:
-//            let generator = UIImpactFeedbackGenerator(style: .soft)
-//            generator.impactOccurred()
+            let generator = UIImpactFeedbackGenerator(style: .soft)
+            generator.impactOccurred()
             break
         case .Timer:
-//            let generator = UIImpactFeedbackGenerator(style: .medium)
-//            generator.impactOccurred()
+            let generator = UIImpactFeedbackGenerator(style: .medium)
+            generator.impactOccurred()
             break
         }
+        #endif
     }
     
 }

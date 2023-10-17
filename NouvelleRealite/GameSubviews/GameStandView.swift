@@ -46,8 +46,17 @@ struct GameStandView: View {
                 VStack {
                     HelpBlock(type: .StandMode)
                     Spacer()
+                    #if os(visionOS)
                     Text(game.durationDisplay)
                         .modifier(BigText())
+                    #else
+                    if game.memoryHelpIsDisplayed {
+                        ModelViewer(game: game)
+                    } else {
+                        Text(game.durationDisplay)
+                            .modifier(BigText())
+                    }
+                    #endif
                     Spacer()
                     if game.memoryHelpIsDisplayed {
                         Text("\(game.memoryHelpRemainingTime)s")
@@ -62,11 +71,13 @@ struct GameStandView: View {
             }
             .onAppear { isAnimated = true }
             .onChange(of: game.memoryHelpIsDisplayed) { oldValue, newValue in
+                #if os(visionOS)
                 if newValue {
                     openWindow(id: NouvelleRealiteApp.PreviewWindow)
                 } else {
                     dismissWindow(id: NouvelleRealiteApp.PreviewWindow)
                 }
+                #endif
             }
         })
     }

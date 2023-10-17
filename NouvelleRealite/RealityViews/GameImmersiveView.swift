@@ -8,6 +8,7 @@
 import SwiftUI
 import RealityKit
 
+#if os(visionOS)
 struct GameImmersiveView: View {
     var body: some View {
         RealityView { content in
@@ -24,3 +25,4 @@ struct GameImmersiveView: View {
 #Preview {
     GameImmersiveView()
 }
+#endif

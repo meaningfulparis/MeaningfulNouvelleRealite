@@ -29,7 +29,6 @@ struct GameIntroductionView: View {
             ModelViewer(game: game)
             #else
             Spacer()
-//            RealityPreview()
             #endif
             HStack() {
                 Spacer()
@@ -40,7 +39,9 @@ struct GameIntroductionView: View {
         }
         .padding(EdgeInsets(top: 24, leading: 0, bottom: 24, trailing: 0))
         .onAppear {
+            #if os(visionOS)
             openWindow(id: NouvelleRealiteApp.PreviewWindow)
+            #endif
         }
     }
 }

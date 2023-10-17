@@ -38,6 +38,7 @@
 		DE9D49FE251E4A3D002F1E83 /* ChallengeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D49FD251E4A3D002F1E83 /* ChallengeCard.swift */; };
 		DE9D4A02251E4A75002F1E83 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D4A01251E4A75002F1E83 /* Challenge.swift */; };
 		DE9D4A06251E4EF1002F1E83 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D4A05251E4EF1002F1E83 /* MainView.swift */; };
+		DE9D625C2ADEE11300662CB0 /* ModelViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0737012514F917000B7D95 /* ModelViewer.swift */; };
 		DEDA1F8F2ADB0E3F00FF8C21 /* GameImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA1F8E2ADB0E3F00FF8C21 /* GameImmersiveView.swift */; };
 		DEDA89A62652A1C500245716 /* good.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DEDA89A52652A1C500245716 /* good.mp3 */; };
 		DEDA89A82652A81E00245716 /* timer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DEDA89A72652A81E00245716 /* timer.mp3 */; };
@@ -378,6 +379,7 @@
 				DE9D49F4251E3919002F1E83 /* IntroductionView.swift in Sources */,
 				DE7A64732510EEAC00894278 /* GameView.swift in Sources */,
 				DE7A64782510F13000894278 /* GameStandView.swift in Sources */,
+				DE9D625C2ADEE11300662CB0 /* ModelViewer.swift in Sources */,
 				DE7A64762510F11B00894278 /* GameIntroductionView.swift in Sources */,
 				DEDA89AA2652AAFF00245716 /* SuccessOverlay.swift in Sources */,
 			);

@@ -20,6 +20,7 @@ struct NouvelleRealiteApp: App {
         .defaultSize(width: 600, height: 1000)
         .windowResizability(.contentSize)
         
+        #if os(visionOS)
         WindowGroup(id: NouvelleRealiteApp.PreviewWindow) {
             ModelPreview()
         }
@@ -30,6 +31,7 @@ struct NouvelleRealiteApp: App {
             GameImmersiveView()
         }
         .immersionStyle(selection: .constant(.mixed), in: .mixed)
+        #endif
     }
     
 }
